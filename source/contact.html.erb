@@ -11,12 +11,20 @@
       <%= text_field_tag :name %>
     </div>
     <div class="form-group">
+      <%= label_tag :steam_id %>
+      <%= text_field_tag :steam_id %>
+    </div>
+    <div class="form-group">
       <%= label_tag :email %>
       <%= text_field_tag :email %>
     </div>
     <div class="form-group">
+      <%= label_tag :verification_code %>
+      <%= text_field_tag :verification_code %>
+    </div>
+    <div class="form-group">
       <%= label_tag :message %>
-      <%= text_area_tag :message, rows: 10, cols: 20 %>
+      <%= text_area_tag :message, rows: 10, cols: 50 %>
     </div>
   <% end %>
 </div>
