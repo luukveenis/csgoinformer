@@ -1,30 +1,32 @@
 <div class="container">
   <h1>Contact Us</h1>
   <p>
-  Questions? Concerns? Compliments? Use the form below to send us a message,
-  whatever the reason is!
+  Questions? Concerns? Compliments? Use the form below to send us a message!
   </p>
 
   <% form_tag "mailto:contact@csgoinformer.com", class: "contact-form" do %>
     <div class="form-group">
-      <%= label_tag :name %>
-      <%= text_field_tag :name %>
+      <div><%= label_tag :name %></div>
+      <%= text_field_tag :name, placeholder: "John Smith" %>
     </div>
     <div class="form-group">
-      <%= label_tag :steam_id %>
-      <%= text_field_tag :steam_id %>
+      <div><%= label_tag :steam_id %></div>
+      <%= text_field_tag :steam_id, placeholder: "STEAM_0:0:25917452" %>
     </div>
     <div class="form-group">
-      <%= label_tag :email %>
-      <%= text_field_tag :email %>
+      <div><%= label_tag :email %></div>
+      <%= text_field_tag :email, placeholder: "john@example.com" %>
     </div>
     <div class="form-group">
-      <%= label_tag :verification_code %>
-      <%= text_field_tag :verification_code %>
+      <div><%= label_tag :verification_code %></div>
+      <%= text_field_tag :verification_code, placeholder: "123JH-45J6DZ-ZX0PO" %>
     </div>
     <div class="form-group">
-      <%= label_tag :message %>
-      <%= text_area_tag :message, rows: 10, cols: 50 %>
+      <div><%= label_tag :message %></div>
+      <%= text_area_tag :message, rows: 10, cols: 50, placeholder: "Your message..." %>
+    </div>
+    <div class="form-group">
+      <%= submit_tag "Send" %>
     </div>
   <% end %>
 </div>
