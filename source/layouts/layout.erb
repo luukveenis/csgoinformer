@@ -15,9 +15,6 @@
         <ul class="nav-links">
           <li><%= link_to "Home", "index.html" %></li>
           <li><%= link_to "About", "about.html" %></li>
-          <li><%= link_to "News", "#" %></li>
-          <li><%= link_to "Events", "#" %></li>
-          <li><%= link_to "Teams", "#" %></li>
           <li><%= link_to "Contact", "contact.html" %></li>
         </ul>
     </nav>
@@ -32,9 +29,6 @@
             <ul class="nav-links">
               <li><%= link_to "Home", "index.html" %></li>
               <li><%= link_to "About", "about.html" %></li>
-              <li><%= link_to "News", "#" %></li>
-              <li><%= link_to "Events", "#" %></li>
-              <li><%= link_to "Teams", "#" %></li>
               <li><%= link_to "Contact", "contact.html" %></li>
             </ul>
           </div>
@@ -44,9 +38,9 @@
         <h4>Social Media</h4>
         <div class="container">
           <ul class="social-links">
+            <li><%= link_to "Steam", "http://steamcommunity.com/groups/csgoinformer" %></li>
             <li><%= link_to "Facebook", "https://www.facebook.com/csgoinformer/" %></li>
             <li><%= link_to "Twitter", "https://twitter.com/CSGO_Informer" %></li>
-            <li><%= link_to "Steam", "http://steamcommunity.com/groups/csgoinformer" %></li>
           </ul>
         </div>
       </div>
@@ -55,8 +49,11 @@
         <div class="container">
           <ul class="contact-links">
             <li><%= link_to "Contact", "contact.html" %></li>
-            <li><%= link_to "Forms", "#" %></li>
-            <li><%= link_to "Inquiries", "#" %></li>
+            <li>
+              <%= link_to "Request to update player or team profile",
+                "contact_form.html"
+              %>
+            </li>
           </ul>
         </div>
       </div>
