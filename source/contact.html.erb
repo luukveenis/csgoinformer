@@ -1,32 +1,52 @@
-<div class="container">
-  <h1>Contact Us</h1>
-  <p>
-  Questions? Concerns? Compliments? Use the form below to send us a message!
-  </p>
-
-  <% form_tag "mailto:contact@csgoinformer.com", class: "contact-form" do %>
-    <div class="form-group">
-      <div><%= label_tag :name %></div>
-      <%= text_field_tag :name, placeholder: "John Smith" %>
+<div class="container bio">
+  <div class="bio-image">
+    <%= image_tag "luuk.jpg", width: 250 %>
+  </div>
+  <div class="bio-content">
+    <h1>About the Author</h1>
+    <p>
+      This site is built and maintained by Luuk Veenis. Luuk is an avid CS:GO
+      player and has been a part of the Counter Strike community since the early
+      days of 1.6. His favourite teams to watch are the new Brazilian
+      <span class="team-name">SK Gaming</span> team (formerly Luminosity Gaming),
+      and <span class="team-name">team Virtus.Pro</span>. When he's not playing
+      Counter Strike, he enjoys playing Diablo 3, Rocket League, and anything
+      friends are interested in playing together.
+    </p>
+  </div>
+</div>
+<div class="contact-body">
+  <div class"social-links">
+    <div class="link-container">
+      <% link_to "http://steamcommunity.com/groups/csgoinformer" do %>
+        <%= image_tag "steam.svg", width: "100", height: "100" %>
+        <p>Join our steam group!</p>
+      <% end %>
     </div>
-    <div class="form-group">
-      <div><%= label_tag :steam_id %></div>
-      <%= text_field_tag :steam_id, placeholder: "STEAM_0:0:25917452" %>
+    <div class="link-container">
+      <% link_to "https://www.facebook.com/csgoinformer/" do %>
+        <%= image_tag "facebook.svg", width: "100", height: "100" %>
+        <p>Like us on Facebook!</p>
+      <% end %>
     </div>
-    <div class="form-group">
-      <div><%= label_tag :email %></div>
-      <%= text_field_tag :email, placeholder: "john@example.com" %>
+    <div class="link-container">
+      <% link_to "https://twitter.com/CSGO_Informer" do %>
+        <%= image_tag "twitter.svg", width: "100", height: "100" %>
+        <p>Follow us on Twitter!</p>
+      <% end %>
     </div>
-    <div class="form-group">
-      <div><%= label_tag :verification_code %></div>
-      <%= text_field_tag :verification_code, placeholder: "123JH-45J6DZ-ZX0PO" %>
-    </div>
-    <div class="form-group">
-      <div><%= label_tag :message %></div>
-      <%= text_area_tag :message, rows: 10, cols: 50, placeholder: "Your message..." %>
-    </div>
-    <div class="form-group">
-      <%= submit_tag "Send" %>
-    </div>
-  <% end %>
+  </div>
+  <div class="contact-links">
+    <p>
+      CS:GO Informer<br>
+      123 Fake Street<br>
+      Victoria, BC<br>
+      Canada V1V 1V1<br>
+    </p>
+    <p>
+      <%= link_to "Request update to team or player profile",
+        "contact_form.html", class: "button"
+      %>
+    </p>
+  </div>
 </div>
