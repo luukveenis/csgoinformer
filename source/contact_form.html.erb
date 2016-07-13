@@ -2,7 +2,8 @@
   <%= link_to "Back to contact", "contact.html" %>
   <h1>Contact Us</h1>
   <p>
-  Questions? Concerns? Compliments? Use the form below to send us a message!
+    Would you like to add your team to the site or have your player profile
+    updated? Please complete the form below.
   </p>
 
   <% form_tag "mailto:contact@csgoinformer.com", class: "contact-form" do %>
@@ -24,7 +25,11 @@
     </div>
     <div class="form-group">
       <div><%= label_tag :message %></div>
-      <%= text_area_tag :message, rows: 10, cols: 50, placeholder: "Your message..." %>
+      <%= text_area_tag :message,
+        rows: 10,
+        cols: 50,
+        placeholder: "Details you would like to have updated..."
+      %>
     </div>
     <div class="form-group">
       <%= submit_tag "Send" %>
