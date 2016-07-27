@@ -30,49 +30,51 @@
       </div>
     </nav>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
 
-    <footer>
-      <div class="footer-menu">
-        <nav class="footer-nav">
-          <h4>Navigation</h4>
+      <footer>
+        <div class="footer-menu">
+          <nav class="footer-nav">
+            <h4>Navigation</h4>
+            <div class="container">
+              <ul class="nav-links">
+                <li><%= link_to "Home", "index.html" %></li>
+                <li><%= link_to "About", "about.html" %></li>
+                <li><%= link_to "Teams", "teams.html" %></li>
+                <li><%= link_to "Contact", "contact.html" %></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="footer-menu">
+          <h4>Social Media</h4>
           <div class="container">
-            <ul class="nav-links">
-              <li><%= link_to "Home", "index.html" %></li>
-              <li><%= link_to "About", "about.html" %></li>
-              <li><%= link_to "Teams", "teams.html" %></li>
-              <li><%= link_to "Contact", "contact.html" %></li>
+            <ul class="social-links">
+              <li><%= link_to "Steam", "http://steamcommunity.com/groups/csgoinformer" %></li>
+              <li><%= link_to "Facebook", "https://www.facebook.com/csgoinformer/" %></li>
+              <li><%= link_to "Twitter", "https://twitter.com/CSGO_Informer" %></li>
             </ul>
           </div>
-        </nav>
-      </div>
-      <div class="footer-menu">
-        <h4>Social Media</h4>
-        <div class="container">
-          <ul class="social-links">
-            <li><%= link_to "Steam", "http://steamcommunity.com/groups/csgoinformer" %></li>
-            <li><%= link_to "Facebook", "https://www.facebook.com/csgoinformer/" %></li>
-            <li><%= link_to "Twitter", "https://twitter.com/CSGO_Informer" %></li>
-          </ul>
         </div>
-      </div>
-      <div class="footer-menu">
-        <h4>Contact Us</h4>
-        <div class="container">
-          <ul class="contact-links">
-            <li><%= link_to "Contact", "contact.html" %></li>
-            <li>
-              <%= link_to "Request to update player or team profile",
-                "contact_form.html"
-              %>
-            </li>
-          </ul>
+        <div class="footer-menu">
+          <h4>Contact Us</h4>
+          <div class="container">
+            <ul class="contact-links">
+              <li><%= link_to "Contact", "contact.html" %></li>
+              <li>
+                <%= link_to "Request to update player or team profile",
+                  "contact_form.html"
+                %>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </footer>
-    <footer>
-      <div>Social media icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-      <div>Steam icon made by <a href="http://www.flaticon.com/authors/zurb" title="Zurb">Zurb</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-    </footer>
+      </footer>
+      <footer>
+        <div>Social media icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <div>Steam icon made by <a href="http://www.flaticon.com/authors/zurb" title="Zurb">Zurb</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+      </footer>
+    </div>
   </body>
 </html>
