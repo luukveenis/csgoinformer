@@ -1,3 +1,7 @@
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag "index" %>
+<% end %>
+
 <h1>Welcome to CS:GO Informer </h1>
 
 <div class="row homepage-banner">
@@ -33,25 +37,34 @@
 </div>
 
 <div class="row">
-  <div class="featured-item">
-    <% link_to "events.html" do %>
+  <div class="col-md-4">
+    <div class="featured-item">
+      <% link_to "events.html" do %>
+        <span class="featured-link"></span>
+      <% end %>
       <span class="featured-title">Upcoming Events</span><br/>
       Click here for the latest events
-    <% end %>
+    </div>
   </div>
-  <div class="featured-item">
-    <% link_to "about.html" do %>
+  <div class="col-md-4">
+    <div class="featured-item">
+      <% link_to "about.html" do %>
+        <span class="featured-link"></span>
+      <% end %>
       <span class="featured-title">Tutorials</span><br/>
       Learn from the pros in our featured tutorials
-    <% end %>
+    </div>
   </div>
-  <div class="featured-item">
-    <% link_to "teams/luminosity.html" do %>
+  <div class="col-md-4">
+    <div class="featured-item">
+      <% link_to "teams/luminosity.html" do %>
+        <span class="featured-link"></span>
+      <% end %>
       <span class="featured-title">Featured Team</span><br/>
       This month's featured team is
       <span class="team-name">Luminosity Gaming</span>. The Brazilian team has
       been making headlines around the world with 1st place finishes in the
       last 3 majors.
-    <% end %>
+    </div>
   </div>
 </div>
