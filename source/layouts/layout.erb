@@ -7,7 +7,7 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "CS:GO Informer - Counter Strike news, tips, and tutorials" %></title>
-    <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "site", "global" %>
     <%= yield_content :stylesheets %>
   </head>
 
