@@ -1,13 +1,26 @@
+@import "variables";
+
 .featured-item {
+  background-color: $background-dark-1;
+  color: darken($text-lighter, 50%);
   position: relative;
-  border: 1px solid #555;
-  border-radius: 5px;
   padding: 10px;
   height: 200px;
+  text-align: center;
+
+  &:hover {
+    background-color: #222;
+    color: $text-lighter;
+
+    .featured-title {
+      color: $link-hover-color;
+    }
+  }
 }
 
 .featured-title {
-  margin-bottom: 20px;
+  color: darken($link-hover-color, 30%);
+  margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1.2em;
 }
