@@ -1,5 +1,27 @@
 @import "variables";
 
+.navbar-dark {
+  background-color: $background-dark-2;
+}
+
+.navbar-nav {
+  .nav-link {
+    padding: 1rem 1rem;
+  }
+
+  .nav-item {
+    &:hover, &.active {
+      color: $link-hover-color;
+      background-color: $background-dark-3;
+      border-bottom: 2px solid $link-hover-color;
+    }
+  }
+
+  .nav-item + .nav-item {
+    margin-left: 0;
+  }
+}
+
 .page-title {
   margin: 2rem 0;
 }
