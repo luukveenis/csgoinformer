@@ -33,30 +33,27 @@
           <div class="col-md-4 footer-menu">
             <nav class="footer-nav">
               <h4>Navigation</h4>
-              <ul class="nav-links">
-                <li><%= link_to "Home", "index.html" %></li>
-                <li><%= link_to "About", "about.html" %></li>
-                <li><%= link_to "Teams", "teams.html" %></li>
-                <li><%= link_to "Contact", "contact.html" %></li>
+              <ul class="nav">
+                <%= nav_item "Home", "index.html" %>
+                <%= nav_item "About", "about.html" %>
+                <%= nav_item "Teams", "teams.html" %>
+                <%= nav_item "Contact", "contact.html" %>
               </ul>
             </nav>
           </div>
           <div class="col-md-4 footer-menu">
             <h4>Social Media</h4>
-            <ul class="social-links">
-              <li><%= link_to "Steam", "http://steamcommunity.com/groups/csgoinformer" %></li>
-              <li><%= link_to "Facebook", "https://www.facebook.com/csgoinformer/" %></li>
-              <li><%= link_to "Twitter", "https://twitter.com/CSGO_Informer" %></li>
+            <ul class="nav social-links">
+              <%= nav_item "Steam", "http://steamcommunity.com/groups/csgoinformer" %>
+              <%= nav_item "Facebook", "https://www.facebook.com/csgoinformer/" %>
+              <%= nav_item "Twitter", "https://twitter.com/CSGO_Informer" %>
             </ul>
           </div>
           <div class="col-md-4 footer-menu">
             <h4>Contact Us</h4>
-            <ul class="contact-links">
-              <li><%= link_to "Contact", "contact.html" %></li>
-              <li>
-                <%= link_to "Request to update player or team profile",
-                  "contact_form.html" %>
-              </li>
+            <ul class="nav contact-links">
+              <%= nav_item "Contact", "contact.html" %>
+              <%= nav_item "Request to update player or team profile", "contact_form.html" %>
             </ul>
           </div>
         </div>
