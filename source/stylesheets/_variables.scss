@@ -20,3 +20,11 @@ $navbar-padding-horizontal: 0;
 $link-hover-color: #f80000;
 $link-decoration: none;
 $link-hover-decoration: none;
+
+/* Table styles */
+$table-bg-hover: $background-dark-2;
+
+th.table-title {
+  text-align: center;
+  font-size: 1.6rem;
+}
