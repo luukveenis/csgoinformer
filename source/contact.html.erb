@@ -2,51 +2,67 @@
 title: "Contact the folks behind CS:GO Informer"
 ---
 
-<div class="container bio">
-  <div class="bio-image">
-    <%= image_tag "luuk.jpg", width: 250 %>
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag "contact" %>
+<% end %>
+
+<div class="row bio">
+  <div class="col-md-6">
+    <div class="bio-content">
+      <h1>About the Author</h1>
+      <p>
+        This site is built and maintained by Luuk Veenis. Luuk is an avid CS:GO
+        player and has been a part of the Counter Strike community since the early
+        days of 1.6. His favourite teams to watch are the new Brazilian
+        <span class="team-name">SK Gaming</span> team (formerly Luminosity Gaming),
+        and <span class="team-name">team Virtus.Pro</span>. When he's not playing
+        Counter Strike, he enjoys playing Diablo 3, Rocket League, and anything
+        friends are interested in playing together.
+      </p>
+    </div>
   </div>
-  <div class="bio-content">
-    <h1>About the Author</h1>
-    <p>
-      This site is built and maintained by Luuk Veenis. Luuk is an avid CS:GO
-      player and has been a part of the Counter Strike community since the early
-      days of 1.6. His favourite teams to watch are the new Brazilian
-      <span class="team-name">SK Gaming</span> team (formerly Luminosity Gaming),
-      and <span class="team-name">team Virtus.Pro</span>. When he's not playing
-      Counter Strike, he enjoys playing Diablo 3, Rocket League, and anything
-      friends are interested in playing together.
-    </p>
+  <div class="col-md-4">
+    <div class="bio-image">
+      <%= image_tag "luuk.jpg", width: 250 %>
+    </div>
   </div>
 </div>
-<div class="contact-body">
-  <div class="social-links">
+<div class="row contact-body">
+  <div class="col-md-4 social-links">
     <div class="link-container">
       <% link_to "http://steamcommunity.com/groups/csgoinformer" do %>
-        <%= image_tag "steam.png", width: "100", height: "100" %>
-        <span class="social-link">Join our steam group!</span>
+        <span class="full-size-link"></span>
       <% end %>
+      <%= image_tag "steam.png", width: "100", height: "100" %>
+      <span class="social-link">Join our steam group!</span>
     </div>
     <div class="link-container">
       <% link_to "https://www.facebook.com/csgoinformer/" do %>
-        <%= image_tag "facebook.png", width: "100", height: "100" %>
-        <span class="social-link">Like us on Facebook!</span>
+        <span class="full-size-link"></span>
       <% end %>
+      <%= image_tag "facebook.png", width: "100", height: "100" %>
+      <span class="social-link">Like us on Facebook!</span>
     </div>
     <div class="link-container">
       <% link_to "https://twitter.com/CSGO_Informer" do %>
-        <%= image_tag "twitter.png", width: "100", height: "100" %>
-        <span class="social-link">Follow us on Twitter!</span>
+        <span class="full-size-link"></span>
       <% end %>
+      <%= image_tag "twitter.png", width: "100", height: "100" %>
+      <span class="social-link">Follow us on Twitter!</span>
     </div>
   </div>
-  <div class="contact-links">
+  <div class="col-md-4 contact-links">
+    <h2>Mailing Address</h2>
     <p>
       CS:GO Informer<br>
       123 Fake Street<br>
       Victoria, BC<br>
       Canada V1V 1V1<br>
     </p>
+  </div>
+</div>
+<div class="row form-links">
+  <div class="col-md-12">
     <p>
       <%= link_to "Request update to team or player profile",
         "contact_form.html", class: "button"

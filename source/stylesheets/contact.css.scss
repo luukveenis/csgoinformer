@@ -1,0 +1,20 @@
+@import "variables";
+
+.bio {
+  margin-top: 2rem;
+}
+
+.link-container {
+  position: relative;
+  background-color: $background-dark-2;
+  margin-bottom: 1rem;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.social-link {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
