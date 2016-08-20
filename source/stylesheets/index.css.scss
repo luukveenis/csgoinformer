@@ -23,6 +23,25 @@
   margin-top: 40px;
 }
 
+.homepage-banner-link {
+  padding: 10px;
+  background-color: $background-dark-2;
+  color: $text-lighter;
+
+  a {
+    color: inherit;
+  }
+
+  &:hover {
+    background-color: $background-hover;
+    color: $link-hover-color;
+  }
+}
+
+.homepage-banner-link + .homepage-banner-link {
+  margin-top: 10px;
+}
+
 .featured-item {
   background-color: $background-dark-1;
   color: darken($text-lighter, 50%);
