@@ -24,13 +24,11 @@
 }
 
 .homepage-banner-link {
-  padding: 10px;
   background-color: $background-dark-2;
   color: $text-lighter;
-
-  a {
-    color: inherit;
-  }
+  text-align: center;
+  padding: 10px;
+  display: block;
 
   &:hover {
     background-color: $background-hover;

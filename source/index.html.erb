@@ -12,26 +12,18 @@
   </div>
   <div class="col-md-3 col-md-offset-1">
     <div class="homepage-banner-links">
-      <div class="homepage-banner-link">
-        <% link_to "about.html" do %>
-          <strong>Learn the Game</strong>
-        <% end %>
-      </div>
-      <div class="homepage-banner-link">
-        <% link_to "events.html" do %>
-          <strong>Upcoming Events</strong>
-        <% end %>
-      </div>
-      <div class="homepage-banner-link">
-        <% link_to "teams.html" do %>
-          <strong>Browse Teams</strong>
-        <% end %>
-      </div>
-      <div class="homepage-banner-link">
-        <% link_to "contact_form.html" do %>
-          <strong>Add your team</strong>
-        <% end %>
-      </div>
+      <% link_to "about.html", class: "homepage-banner-link" do %>
+        <strong>Learn the Game</strong>
+      <% end %>
+      <% link_to "events.html", class: "homepage-banner-link" do %>
+        <strong>Upcoming Events</strong>
+      <% end %>
+      <% link_to "teams.html", class: "homepage-banner-link" do %>
+        <strong>Browse Teams</strong>
+      <% end %>
+      <% link_to "contact_form.html", class: "homepage-banner-link" do %>
+        <strong>Add your team</strong>
+      <% end %>
     </div>
   </div>
 </div>
