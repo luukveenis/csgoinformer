@@ -21,14 +21,15 @@ title: "Contact the folks behind CS:GO Informer"
       </p>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 col-md-offset-1">
     <div class="bio-image">
       <%= image_tag "luuk.jpg", width: 250 %>
     </div>
   </div>
 </div>
 <div class="row contact-body">
-  <div class="col-md-4 social-links">
+  <div class="col-md-5 social-links">
+    <h2>Keep in touch on social media</h2>
     <div class="link-container">
       <% link_to "http://steamcommunity.com/groups/csgoinformer" do %>
         <span class="full-size-link"></span>
@@ -51,6 +52,17 @@ title: "Contact the folks behind CS:GO Informer"
       <span class="social-link">Follow us on Twitter!</span>
     </div>
   </div>
+  <div class="col-md-5 col-md-offset-2">
+    <h2>Contact Forms</h2>
+    <%= link_to "General inquiries",
+        "#", class: "contact-link"
+    %>
+    <%= link_to "Update player or team profle",
+        "contact_form.html", class: "contact-link"
+    %>
+  </div>
+</div>
+<div class="row">
   <div class="col-md-4 contact-links">
     <h2>Mailing Address</h2>
     <p>
@@ -58,15 +70,6 @@ title: "Contact the folks behind CS:GO Informer"
       123 Fake Street<br>
       Victoria, BC<br>
       Canada V1V 1V1<br>
-    </p>
-  </div>
-</div>
-<div class="row form-links">
-  <div class="col-md-12">
-    <p>
-      <%= link_to "Request update to team or player profile",
-        "contact_form.html", class: "button"
-      %>
     </p>
   </div>
 </div>
