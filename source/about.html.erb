@@ -2,33 +2,43 @@
 title: "Learn CS:GO - Introduction, tutorials, and more"
 ---
 
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag "about" %>
+<% end %>
+
 <div class="row feature-image-wrapper">
-  <%= image_tag "CSGO-Header.jpg", width: 900 %>
-</div>
-
-<div class="row">
-  <div class="about-content">
-    <h2>Game Basics</h2>
-    <p>
-      Counter-Strike: Global Offensive is the most recent installment in a
-      long-running Counter-Strike franchise of first-person shooters. The game
-      is based around two opposing teams: the terrorists and counter-terrorists.
-      Unlike many other first-person shooters, there is no story line, campaign
-      mode, or even tutorials. The game focuses heavily on skill-based team
-      play and has a steep learning curve. Many critics of the game cite how
-      brutal it is to new players as a primary reason they did not like the
-      it. Valve has mitigated this issue somewhat in Global Offensive by
-      introducing casual and competitive modes, which will be discussed in the
-      next section.
-    </p>
-  </div>
-  <div class="about-image-wrapper">
-    <%= image_tag "CSGO-logo.jpg", width: 300 %>
+  <div class="col-md-12">
+    <%= image_tag "CSGO-Header.jpg", class: "featured-image" %>
   </div>
 </div>
 
 <div class="row">
-  <div class="about-content">
+  <div class="col-md-8">
+    <div class="about-content">
+      <h2>Game Basics</h2>
+      <p>
+        Counter-Strike: Global Offensive is the most recent installment in a
+        long-running Counter-Strike franchise of first-person shooters. The game
+        is based around two opposing teams: the terrorists and counter-terrorists.
+        Unlike many other first-person shooters, there is no story line, campaign
+        mode, or even tutorials. The game focuses heavily on skill-based team
+        play and has a steep learning curve. Many critics of the game cite how
+        brutal it is to new players as a primary reason they did not like the
+        it. Valve has mitigated this issue somewhat in Global Offensive by
+        introducing casual and competitive modes, which will be discussed in the
+        next section.
+      </p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="about-image-wrapper">
+      <%= image_tag "CSGO-logo.jpg", width: 300 %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 about-content">
     <h2>Game Modes</h2>
     <p>
       CS:GO provides a number of different game modes, targetting different play
