@@ -2,7 +2,7 @@
 title: "Add your player or team profile to CS:GO Informer"
 ---
 
-<div class="container">
+<div class="page-title">
   <h1>Contact Us</h1>
   <p>
     Would you like to add your team to the site or have your player profile
@@ -10,32 +10,41 @@ title: "Add your player or team profile to CS:GO Informer"
   </p>
 
   <% form_tag "mailto:contact@csgoinformer.com", class: "contact-form" do %>
-    <div class="form-group">
-      <div><%= label_tag :name %></div>
-      <%= text_field_tag :name, placeholder: "John Smith" %>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <div><%= label_tag :name %></div>
+          <%= text_field_tag :name, placeholder: "John Smith", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <div><%= label_tag :steam_id %></div>
+          <%= text_field_tag :steam_id, placeholder: "STEAM_0:0:25917452", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <div><%= label_tag :email %></div>
+          <%= text_field_tag :email, placeholder: "john@example.com", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <div><%= label_tag :verification_code %></div>
+          <%= text_field_tag :verification_code, placeholder: "123JH-45J6DZ-ZX0PO", class: "form-control" %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <div><%= label_tag :message %></div>
+          <%= text_area_tag :message,
+            class: "form-control",
+            rows: 10,
+            cols: 50,
+            placeholder: "Details you would like to have updated..."
+          %>
+        </div>
+      </div>
     </div>
     <div class="form-group">
-      <div><%= label_tag :steam_id %></div>
-      <%= text_field_tag :steam_id, placeholder: "STEAM_0:0:25917452" %>
-    </div>
-    <div class="form-group">
-      <div><%= label_tag :email %></div>
-      <%= text_field_tag :email, placeholder: "john@example.com" %>
-    </div>
-    <div class="form-group">
-      <div><%= label_tag :verification_code %></div>
-      <%= text_field_tag :verification_code, placeholder: "123JH-45J6DZ-ZX0PO" %>
-    </div>
-    <div class="form-group">
-      <div><%= label_tag :message %></div>
-      <%= text_area_tag :message,
-        rows: 10,
-        cols: 50,
-        placeholder: "Details you would like to have updated..."
-      %>
-    </div>
-    <div class="form-group">
-      <%= submit_tag "Send" %>
+      <button type="submit" class="btn btn-danger">Send</button>
     </div>
   <% end %>
 </div>
