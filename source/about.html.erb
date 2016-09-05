@@ -13,9 +13,9 @@ title: "Learn CS:GO - Introduction, tutorials, and more"
 </div>
 
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-6">
     <div class="about-content">
-      <h2>Game Basics</h2>
+      <h1>The Basics</h1>
       <p>
         Counter-Strike: Global Offensive is the most recent installment in a
         long-running Counter-Strike franchise of first-person shooters. The game
@@ -30,16 +30,9 @@ title: "Learn CS:GO - Introduction, tutorials, and more"
       </p>
     </div>
   </div>
-  <div class="col-md-4">
-    <div class="about-image-wrapper">
-      <%= image_tag "CSGO-logo.jpg", width: 300 %>
-    </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-md-12 about-content">
-    <h2>Game Modes</h2>
+  <div class="col-md-6 about-content">
+    <h1>Game Modes</h1>
     <p>
       CS:GO provides a number of different game modes, targetting different play
       styles. The game modes are divided between casual and competitive modes.
@@ -48,14 +41,24 @@ title: "Learn CS:GO - Introduction, tutorials, and more"
       place to learn the game, but without a ranking system, new players may
       find themselves facing highly skilled veteran players.
     </p>
+  </div>
+</div>
 
-    <h3>Casual Game Modes</h3>
-    <p>
-      Casual game modes are all about having fun without feeling the pressure of
-      a competitive encironment.
-    </p>
+<div class="row">
+  <div class="col-md-12 about-content">
+    <h2 class="section-heading">Casual Game Modes</h2>
+  </div>
+</div>
 
-    <h4>Arms Race</h4>
+<div class="row">
+  <div class="col-md-6 about-content">
+    <h4 class="sub-heading">Arms Race</h4>
+    <figure>
+      <%= image_tag "csgo_goldknife.jpg", class: "content-image", alt: "Counter strike player with gold knife" %>
+      <figcaption>
+        Image from <%= link_to "vizzed.com", "http://www.vizzed.com/videogames/screenshots/44/445945/87239/CounterStrike%20Global%20Offensive_2015-01-05_000221420772148.jpg" %>
+      </figcaption>
+    </figure>
     <p>
       Arms Race is often referred to as gungame in many other online shooters. In
       this game mode players spawn with a specific weapon. Each time the player
@@ -66,8 +69,16 @@ title: "Learn CS:GO - Introduction, tutorials, and more"
       while on a gun level; when this happens the player advances to the next
       level and the player they killed is demoted to the previous level.
     </p>
+  </div>
 
-    <h4>Demolition</h4>
+  <div class="col-md-6 about-content">
+    <h4 class="sub-heading">Demolition</h4>
+    <figure>
+      <%= image_tag "demolition.jpg", class: "content-image", alt: "Demolition start of round" %>
+      <figcaption>
+        Image from <%= link_to "YouTube", "https://i.ytimg.com/vi/TvseHwRXVbU/maxresdefault.jpg" %>
+      </figcaption>
+    </figure>
     <p>
       The demolition game mode has the same objective as the bomb scenario game
       mode. The terrorist team's objective is to plant the bomb and destroy the
@@ -75,8 +86,18 @@ title: "Learn CS:GO - Introduction, tutorials, and more"
       either: one team eliminates the entire enemy team, the terrorists plant the
       bomb and it explodes, or the counter terrorist team defuses the bomb.
     </p>
+  </div>
+</div>
 
-    <h4>Deatmatch</h4>
+<div class="row">
+  <div class="col-md-6">
+    <h4 class="sub-heading">Deatmatch</h4>
+    <figure>
+      <%= image_tag "csgo_gunfight.png", class: "content-image", alt: "Counter Strike gun fight" %>
+      <figcaption>
+        Image from <%= link_to "pcgamesn.com", "http://www.pcgamesn.com/sites/default/files/counter-strike_go_psn.0.png" %>
+      </figcaption>
+    </figure>
     <p>
       The deathmatch game mode has no objective beyond eliminating enemy players.
       Unlike other game modes, when players die they respawn almost immediately.
@@ -85,8 +106,16 @@ title: "Learn CS:GO - Introduction, tutorials, and more"
       eliminating players from the enemy team and gain extra points for getting
       kills with the desired weapon displayed on screen.
     </p>
+  </div>
 
-    <h4>Bomb Scenario</h4>
+  <div class="col-md-6">
+    <h4 class="sub-heading">Bomb Scenario</h4>
+    <figure>
+      <%= image_tag "csgo_bomb.jpg", class: "content-image", alt: "Counter terrorist carrying a hostage" %>
+      <figcaption>
+        Image from <%= link_to "worldofleveldesign.com", "http://www.worldofleveldesign.com/categories/csgo-tutorials/images/011-csgo-09.jpg" %>
+      </figcaption>
+    </figure>
     <p>
       In bomb scenario maps, there are two bombsites labeled A and B located on
       the map somewhere. One player chosen at random each round on the terrorist
@@ -98,8 +127,18 @@ title: "Learn CS:GO - Introduction, tutorials, and more"
       they win the round. If one team eliminates the entire opponent team before
       either of these happen, they also win the round.
     </p>
+  </div>
+</div>
 
-    <h4>Hostage Scenario</h4>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h4 class="sub-heading">Hostage Scenario</h4>
+    <figure>
+      <%= image_tag "csgo_hostage.jpg", class: "content-image", alt: "Counter terrorist carrying a hostage" %>
+      <figcaption>
+        Image from <%= link_to "Wikia", "http://counterstrike.wikia.com/wiki/Hostage_rescue" %>
+      </figcaption>
+    </figure>
     <p>
       In hostage scenario maps, there are several hostages located in fixed
       locations near the terrorist spawn point. The terrorist team's objective
@@ -108,8 +147,12 @@ title: "Learn CS:GO - Introduction, tutorials, and more"
       the hostages is rescued, the counter-terrorist team wins. Otherwise, if
       either team eliminates the other team they win.
     </p>
+  </div>
+</div>
 
-    <h3>Competitive Game Modes</h3>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="section-heading">Competitive Game Modes</h2>
     <p>
       Competitive game modes bring a thrill to the game for experienced players.
       Players receive a rank based on how many matches they've won or lost, which
@@ -118,15 +161,21 @@ title: "Learn CS:GO - Introduction, tutorials, and more"
       friendly fire enabled; meaning players can damage their teammates, which is
       not possible in casual modes.
     </p>
+  </div>
+</div>
 
-    <h4>Bomb Scenario</h4>
+<div class="row">
+  <div class="col-md-6">
+    <h4 class="sub-heading">Bomb Scenario</h4>
     <p>
       Competitive bomb scenario maps play identically to casual bomb scenario
       maps. They are also the default for tournament play. In some leagues the
       bomb timers are slightly reduced from the standard 40 seconds.
     </p>
+  </div>
 
-    <h4>Hostage Scenario</h4>
+  <div class="col-md-6">
+    <h4 class="sub-heading">Hostage Scenario</h4>
     <p>
       Hostage scenario maps are also identical to casual modes, except that they
       are rarely played in competitive play. The map pool used in professional

@@ -1,4 +1,17 @@
-.featured-image {
+img {
   width: 100%;
   height: auto;
+}
+
+figcaption {
+  font-size: 0.8rem;
+}
+
+.section-heading,
+.sub-heading {
+  text-align: center;
+}
+
+.content-image {
+  margin-bottom: 10px;
 }
