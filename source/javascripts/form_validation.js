@@ -3,35 +3,25 @@
  * The code can be found here:
  * http://www.tutorialspoint.com/javascript/javascript_form_validations.htm
  */
-function validateGeneralForm()
-{
-  if( document.myForm.Name.value == "" )
-  {
-    alert( "Please provide your name!" );
-    document.myForm.Name.focus() ;
+function validateGeneralForm() {
+  nameField = document.generalForm.name;
+  emailField = document.generalForm.email;
+  messageField = document.generalForm.message;
+
+  if(nameField.value.length < 3) {
+    alert("Please provide your full first and last name!");
     return false;
   }
 
-  if( document.myForm.EMail.value == "" )
-  {
-    alert( "Please provide your Email!" );
-    document.myForm.EMail.focus() ;
+  if(emailField.value == "") {
+    alert( "Please provide your email!" );
     return false;
   }
 
-  if( document.myForm.Zip.value == "" ||
-      isNaN( document.myForm.Zip.value ) ||
-      document.myForm.Zip.value.length != 5 )
+  if(messageField.value == "")
   {
-    alert( "Please provide a zip in the format #####." );
-    document.myForm.Zip.focus() ;
+    alert( "Please tell us how we can help you!");
     return false;
   }
-
-  if( document.myForm.Country.value == "-1" )
-  {
-    alert( "Please provide your country!" );
-    return false;
-  }
-  return( true );
+  return true;
 }
