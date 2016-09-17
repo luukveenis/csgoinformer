@@ -1,0 +1,33 @@
+@import "variables";
+
+.bio {
+  margin-top: 2rem;
+}
+
+.link-container {
+  position: relative;
+  background-color: $background-dark-2;
+  margin-bottom: 1rem;
+
+  &:hover {
+    color: $link-hover-color;
+    background-color: $background-hover;
+  }
+}
+
+.social-link {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.contact-link {
+  background-color: $background-dark-2;
+  display: inline-block;
+  padding: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+
+  &:hover {
+    background-color: $background-hover;
+  }
+}

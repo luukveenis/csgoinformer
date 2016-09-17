@@ -7,63 +7,67 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "CS:GO Informer - Counter Strike news, tips, and tutorials" %></title>
+    <%= stylesheet_link_tag "site", "global" %>
+    <%= yield_content :stylesheets %>
   </head>
 
   <body class="<%= page_classes %>">
-    <nav class="navbar">
-      <div class="container">
-        <ul class="nav-links">
-          <li><%= link_to "Home", "index.html" %></li>
-          <li><%= link_to "About", "about.html" %></li>
-          <li><%= link_to "Teams", "teams.html" %></li>
-          <li><%= link_to "Contact", "contact.html" %></li>
-        </ul>
+    <div class="page-wrapper">
+      <nav class="navbar navbar-full navbar-dark">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <%= nav_item "Home", "index.html" %>
+            <%= nav_item "About", "about.html" %>
+            <%= nav_item "Teams", "teams.html" %>
+            <%= nav_item "Contact", "contact.html" %>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="body-wrapper container">
+        <%= yield %>
       </div>
-    </nav>
 
-    <%= yield %>
-
-    <footer>
-      <div class="footer-menu">
-        <nav class="footer-nav">
-          <h4>Navigation</h4>
+      <div class="footer-wrapper">
+        <footer class="footer-menu">
           <div class="container">
-            <ul class="nav-links">
-              <li><%= link_to "Home", "index.html" %></li>
-              <li><%= link_to "About", "about.html" %></li>
-              <li><%= link_to "Teams", "teams.html" %></li>
-              <li><%= link_to "Contact", "contact.html" %></li>
-            </ul>
+            <div class="row">
+              <div class="col-md-4 footer-menu">
+                <nav class="footer-nav">
+                  <h4>Navigation</h4>
+                  <ul class="nav">
+                    <%= nav_item "Home", "index.html" %>
+                    <%= nav_item "About", "about.html" %>
+                    <%= nav_item "Teams", "teams.html" %>
+                    <%= nav_item "Contact", "contact.html" %>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-md-4 footer-menu">
+                <h4>Social Media</h4>
+                <ul class="nav social-links">
+                  <%= nav_item "Steam", "http://steamcommunity.com/groups/csgoinformer" %>
+                  <%= nav_item "Facebook", "https://www.facebook.com/csgoinformer/" %>
+                  <%= nav_item "Twitter", "https://twitter.com/CSGO_Informer" %>
+                </ul>
+              </div>
+              <div class="col-md-4 footer-menu">
+                <h4>Contact Us</h4>
+                <ul class="nav contact-links">
+                  <%= nav_item "General inquiries", "#" %>
+                  <%= nav_item "Update player or team profile", "contact_player.html" %>
+                </ul>
+              </div>
+            </div>
           </div>
-        </nav>
+        </footer>
+        <footer class="credits">
+          <div class="container">
+            <div>Social media icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div>Steam icon made by <a href="http://www.flaticon.com/authors/zurb" title="Zurb">Zurb</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+          </div>
+        </footer>
       </div>
-      <div class="footer-menu">
-        <h4>Social Media</h4>
-        <div class="container">
-          <ul class="social-links">
-            <li><%= link_to "Steam", "http://steamcommunity.com/groups/csgoinformer" %></li>
-            <li><%= link_to "Facebook", "https://www.facebook.com/csgoinformer/" %></li>
-            <li><%= link_to "Twitter", "https://twitter.com/CSGO_Informer" %></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-menu">
-        <h4>Contact Us</h4>
-        <div class="container">
-          <ul class="contact-links">
-            <li><%= link_to "Contact", "contact.html" %></li>
-            <li>
-              <%= link_to "Request to update player or team profile",
-                "contact_form.html"
-              %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <footer>
-      <div>Social media icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-      <div>Steam icon made by <a href="http://www.flaticon.com/authors/zurb" title="Zurb">Zurb</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-    </footer>
+    </div>
   </body>
 </html>

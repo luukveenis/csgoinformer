@@ -1,0 +1,32 @@
+/* My dark theme colors */
+$background-dark-1: #000;
+$background-dark-2: #111;
+$background-dark-3: #181818;
+
+$background-hover: #222;
+
+$text-light: #888;
+$text-lighter: #ddd;
+
+/* Global styles */
+$body-bg: $background-dark-3;
+$body-color: $text-light;
+$brand-primary: #aaa;
+$headings-color: $text-lighter;
+
+/* Navbar Styles */
+$navbar-padding-vertical: 0;
+$navbar-padding-horizontal: 0;
+
+/* Link styles */
+$link-hover-color: #f80000;
+$link-decoration: none;
+$link-hover-decoration: none;
+
+/* Table styles */
+$table-bg-hover: $background-dark-2;
+
+th.table-title {
+  text-align: center;
+  font-size: 1.6rem;
+}

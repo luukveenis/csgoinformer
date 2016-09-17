@@ -1,0 +1,42 @@
+---
+title: "Add your player or team profile to CS:GO Informer"
+---
+
+<div class="page-title">
+  <h1>Contact Us</h1>
+  <p>
+    Questions? Concerns? Please fill out the form below and we will respond
+    within 1 business day.
+  </p>
+
+  <% form_tag "mailto:contact@csgoinformer.com", class: "contact-form" do %>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <div><%= label_tag :name %></div>
+          <%= text_field_tag :name, placeholder: "John Smith", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <div><%= label_tag :email %></div>
+          <%= text_field_tag :email, placeholder: "john@example.com", class: "form-control" %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <div><%= label_tag :message %></div>
+          <%= text_area_tag :message,
+            class: "form-control",
+            rows: 10,
+            cols: 50,
+            placeholder: "Details you would like to have updated..."
+          %>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-danger">Send</button>
+    </div>
+  <% end %>
+</div>

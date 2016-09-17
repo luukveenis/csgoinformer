@@ -1,27 +1,27 @@
-<h1>Welcome to CS:GO Informer </h1>
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag "index" %>
+<% end %>
 
-<div class="homepage-banner">
-  <div class="promo-video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/edYCtaNueQY" frameborder="0" allowfullscreen></iframe>
+<div class="row homepage-banner">
+  <div class="col-md-7">
+    <div class="auto-resizable-iframe">
+      <div>
+        <iframe src="https://www.youtube.com/embed/edYCtaNueQY" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
-  <div class="homepage-banner-links">
-    <div class="homepage-banner-link">
-      <% link_to "about.html" do %>
+  <div class="col-md-3 col-md-offset-1">
+    <div class="homepage-banner-links">
+      <% link_to "about.html", class: "homepage-banner-link" do %>
         <strong>Learn the Game</strong>
       <% end %>
-    </div>
-    <div class="homepage-banner-link">
-      <% link_to "events.html" do %>
+      <% link_to "events.html", class: "homepage-banner-link" do %>
         <strong>Upcoming Events</strong>
       <% end %>
-    </div>
-    <div class="homepage-banner-link">
-      <% link_to "teams.html" do %>
+      <% link_to "teams.html", class: "homepage-banner-link" do %>
         <strong>Browse Teams</strong>
       <% end %>
-    </div>
-    <div class="homepage-banner-link">
-      <% link_to "contact_form.html" do %>
+      <% link_to "contact_player.html", class: "homepage-banner-link" do %>
         <strong>Add your team</strong>
       <% end %>
     </div>
@@ -29,25 +29,47 @@
 </div>
 
 <div class="row">
-  <div class="featured-item">
-    <% link_to "events.html" do %>
-      <span class="featured-title">Upcoming Events</span><br/>
-      Click here for the latest events
-    <% end %>
+  <div class="col-md-8">
+    <h2>Our Mission</h2>
+    <p>
+      We built CS:GO Informer as a one-stop place for all the latest Counter
+      Strike news, event listings, and tutorials. We are dedicated to providing
+      the most up-to-date information available, without any unnecessary
+      advertisements or spam.
+    </p>
   </div>
-  <div class="featured-item">
-    <% link_to "about.html" do %>
-      <span class="featured-title">Tutorials</span><br/>
-      Learn from the pros in our featured tutorials
-    <% end %>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="featured-item">
+      <% link_to "events.html" do %>
+        <span class="featured-link"></span>
+      <% end %>
+      <h2 class="featured-title">Upcoming Events</h2>
+      We maintain a comprehensive list of upcoming events. Majors, minors, LAN
+      events, it's all here.
+    </div>
   </div>
-  <div class="featured-item">
-    <% link_to "teams/luminosity.html" do %>
-      <span class="featured-title">Featured Team</span><br/>
+  <div class="col-md-4">
+    <div class="featured-item">
+      <% link_to "about.html" do %>
+        <span class="featured-link"></span>
+      <% end %>
+      <h2 class="featured-title">Tutorials</h2>
+      Do you want to improve as a Counter Strike player? We feature tutorials
+      by pros that will help you get there.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="featured-item">
+      <% link_to "teams/luminosity.html" do %>
+        <span class="featured-link"></span>
+      <% end %>
+      <h2 class="featured-title">Featured Team</h2>
       This month's featured team is
       <span class="team-name">Luminosity Gaming</span>. The Brazilian team has
       been making headlines around the world with 1st place finishes in the
       last 3 majors.
-    <% end %>
+    </div>
   </div>
 </div>

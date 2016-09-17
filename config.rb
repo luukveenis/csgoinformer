@@ -27,11 +27,17 @@ activate :relative_assets
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def nav_item link_text, path
+    base_name = File.basename(path, ".html")
+    base_path = File.basename(current_page.path, ".html")
+    active_class = base_path =~ /#{base_name}/ ? "active" : ""
+
+    content_tag :li, class: "nav-item #{active_class}" do
+      link_to link_text, path, class: "nav-link"
+    end
+  end
+end
 
 # Build-specific configuration
 configure :build do
