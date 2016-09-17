@@ -1,6 +1,9 @@
 ---
 title: "Add your player or team profile to CS:GO Informer"
 ---
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "form_validation" %>
+<% end %>
 
 <div class="page-title">
   <h1>Contact Us</h1>
@@ -9,7 +12,7 @@ title: "Add your player or team profile to CS:GO Informer"
     within 1 business day.
   </p>
 
-  <% form_tag "mailto:contact@csgoinformer.com", class: "contact-form" do %>
+  <% form_tag "mailto:contact@csgoinformer.com", class: "contact-form", onsubmit: "return validateGeneralForm();" do %>
     <div class="row">
       <div class="col-md-4">
         <div class="form-group">
