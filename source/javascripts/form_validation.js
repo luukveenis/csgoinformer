@@ -40,5 +40,9 @@ window.FormValidations = {
  * then calls our validator when the form is submitted.
  */
 document.querySelector("#generalForm").addEventListener("submit", function(event) {
-  FormValidations.validateGeneralForm(event);
+  if (!FormValidations.validateGeneralForm(event)) {
+    event.preventDefault();
+    return false;
+  }
+  return true;
 });
