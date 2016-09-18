@@ -7,21 +7,22 @@ function validateGeneralForm() {
   nameField = document.generalForm.name;
   emailField = document.generalForm.email;
   messageField = document.generalForm.message;
+  noErrors = true;
 
   if(nameField.value.length < 3) {
-    alert("Please provide your full first and last name!");
-    return false;
+    nameField.className += " form-field-error";
+    noErrors = false;
   }
 
   if(emailField.value == "") {
-    alert( "Please provide your email!" );
-    return false;
+    emailField.className += " form-field-error";
+    noErrors = false;
   }
 
   if(messageField.value == "")
   {
-    alert( "Please tell us how we can help you!");
-    return false;
+    messageField.className += " form-field-error";
+    noErrors = false;
   }
-  return true;
+  return noErrors;
 }
