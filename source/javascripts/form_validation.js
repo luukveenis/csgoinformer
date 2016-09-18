@@ -45,7 +45,7 @@ window.FormValidations = {
 /* Binds a listener to the submit event on the general contact form, which
  * then calls our validator when the form is submitted.
  */
-document.querySelector("#generalForm").addEventListener("submit", function(event) {
+document.querySelector("#form-general").addEventListener("submit", function(event) {
   /* If validations fail, prevent the form from submitting and return focus
    * to the first errored field */
   if (!FormValidations.validateGeneralForm(event)) {
