@@ -53,3 +53,13 @@ document.querySelector("#generalForm").addEventListener("submit", function(event
   }
   return true;
 });
+
+/* When the user fills out errored fields, we should remove the error messages
+ * until they attempt to submit the form again */
+for (let element of document.querySelectorAll(".form-control")) {
+  element.addEventListener("change", function(event) {
+    el = event.target;
+    el.className = el.className.replace("form-field-error", "");
+    el.nextElementSibling.innerHTML = "";
+  });
+}
