@@ -16,7 +16,9 @@ window.FormValidations = {
     /* A name must have at least a first and last name separated by a space, so
      * it cannot be shorter than 3 characters */
     if(nameField.value.length < 3) {
+      // Sets the error class name styling
       nameField.className += " form-field-error";
+      // Display an error message to the user
       nameField.nextElementSibling.innerHTML = "Please provide your full first and last name";
       noErrors = false;
     }
