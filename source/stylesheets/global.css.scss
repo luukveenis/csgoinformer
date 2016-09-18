@@ -80,8 +80,10 @@ body {
 .form-field-error {
   border: 1px solid $link-hover-color;
 
-  & + .errors::after {
-    color: red;
-    content: "x";
+  & + .errors {
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 3px;
+    color: $link-hover-color;
   }
 }
