@@ -4,13 +4,13 @@
  * http://www.tutorialspoint.com/javascript/javascript_form_validations.htm
  */
 window.FormValidations = {
-
   /* Function that validates general contact form fields: name, email and message */
-  validateGeneralForm: function(event) {
-    form = event.target;
+  validateForm: function(form) {
     nameField = form.name;
     emailField = form.email;
     messageField = form.message;
+    steamIdField = form.steam_id;
+    verificationCodeField = form.verification_code;
     noErrors = true;
 
     /* A name must have at least a first and last name separated by a space, so
@@ -37,24 +37,54 @@ window.FormValidations = {
       messageField.nextElementSibling.innerHTML = "Please tell us how we can help you";
       noErrors = false;
     }
-    event.preventDefault;
+
+    if (steamIdField && steamIdField.value == "") {
+      steamIdField.className += " form-field-error";
+      steamIdField.nextElementSibling.innerHTML = "Please tell us how we can help you";
+      noErrors = false;
+    }
+
+    if (verificationCodeField && verificationCodeField.value == "") {
+      verificationCodeField.className += " form-field-error";
+      verificationCodeField.nextElementSibling.innerHTML = "Please tell us how we can help you";
+      noErrors = false;
+    }
     return noErrors;
   }
 }
 
+var generalForm = document.querySelector("#form-general");
+var playerForm = document.querySelector("#form-player");
+
 /* Binds a listener to the submit event on the general contact form, which
  * then calls our validator when the form is submitted.
  */
-document.querySelector("#form-general").addEventListener("submit", function(event) {
-  /* If validations fail, prevent the form from submitting and return focus
-   * to the first errored field */
-  if (!FormValidations.validateGeneralForm(event)) {
-    event.preventDefault();
-    document.querySelector(".form-field-error").focus();
-    return false;
-  }
-  return true;
-});
+if (generalForm) {
+  generalForm.addEventListener("submit", function(event) {
+    /* If validations fail, prevent the form from submitting and return focus
+     * to the first errored field */
+    if (!FormValidations.validateForm(event.target)) {
+      event.preventDefault();
+      document.querySelector(".form-field-error").focus();
+      return false;
+    }
+    return true;
+  });
+}
+
+/* Binds a listener to the submit event on the player contact form, which calls
+ * both the general and player form validators.
+ */
+if (playerForm) {
+  document.querySelector("#form-player").addEventListener("submit", function(event) {
+    if (!FormValidations.validateForm(event.target)) {
+      event.preventDefault();
+      document.querySelector(".form-field-error").focus();
+      return false;
+    }
+    return true;
+  });
+}
 
 /* When the user fills out errored fields, we should remove the error messages
  * until they attempt to submit the form again */
