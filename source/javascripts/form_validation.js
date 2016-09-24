@@ -54,8 +54,8 @@
     }
   }
 
-  var generalForm = document.querySelector("#form-general");
-  var playerForm = document.querySelector("#form-player");
+  var generalForm = document.getElementById("form-general");
+  var playerForm = document.getElementById("form-player");
 
   /* Binds a listener to the submit event on the general contact form, which
    * then calls our validator when the form is submitted.
@@ -77,7 +77,7 @@
    * both the general and player form validators.
    */
   if (playerForm) {
-    document.querySelector("#form-player").addEventListener("submit", function(event) {
+    document.getElementById("form-player").addEventListener("submit", function(event) {
       if (!FormValidations.validateForm(event.target)) {
         event.preventDefault();
         document.querySelector(".form-field-error").focus();
