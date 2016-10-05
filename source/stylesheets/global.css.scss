@@ -75,3 +75,15 @@ body {
   font-size: 0.6rem;
   background-color: $background-dark-1;
 }
+
+/* Form styles */
+.form-field-error {
+  border: 1px solid $link-hover-color;
+
+  & + .errors {
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 3px;
+    color: $link-hover-color;
+  }
+}
