@@ -1,6 +1,9 @@
 ---
 title: "Professional CS:GO teams"
 ---
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag "teams" %>
+<% end %>
 
 <div class="row">
   <div class="col-md-12">
@@ -278,3 +281,5 @@ title: "Professional CS:GO teams"
     </div>
   </div>
 </div>
+
+<%= partial "teams/player_modal" %>
