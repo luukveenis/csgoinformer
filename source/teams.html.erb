@@ -4,6 +4,9 @@ title: "Professional CS:GO teams"
 <% content_for :stylesheets do %>
   <%= stylesheet_link_tag "teams" %>
 <% end %>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "teams" %>
+<% end %>
 
 <div class="row">
   <div class="col-md-12">
@@ -17,6 +20,12 @@ title: "Professional CS:GO teams"
     </div>
   </div>
 </div>
+
+<ul id="team-cloud-9" class="team-list">
+  <li>
+    <span class="team-list-player">Stewie2k</span>
+  </li>
+</ul>
 
 <!-- ======= Cloud9 ======= -->
 <div class="row">
