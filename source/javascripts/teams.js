@@ -49,13 +49,16 @@
 
   function constructStatHTML(name, value) {
     result = [];
+    result.push("<div class='stat-wrapper'>");
     result.push("<span class='stat-name'>" + name + "</span>");
     result.push("<span class='stat-value'>" + value + "</span>");
+    result.push("</div>");
     return result.join("\n");
   }
 
   function displayStats(playerStats) {
-    var modal = document.getElementById("player-modal");
+    var modal = document.querySelector(".player-modal-wrapper");
+    var playerName = modal.querySelector("#player-name");
     var hoursPlayed = modal.querySelector("#hours-played");
     var matchesWon = modal.querySelector("#matches-won");
     var matchesPlayed = modal.querySelector("#matches-played");
@@ -64,13 +67,14 @@
     var accuracy = modal.querySelector("#accuracy");
     var hours = Math.round(playerStats.hoursPlayed());
 
+    playerName.innerHTML = "<h1>" + playerStats.name + "</h1>"
     hoursPlayed.innerHTML = constructStatHTML("Hours Played", hours);
     matchesWon.innerHTML = constructStatHTML("Matches Won", playerStats.totalMatchesWon);
     matchesPlayed.innerHTML = constructStatHTML("Matches Played", playerStats.totalMatchesPlayed);
     totalKills.innerHTML = constructStatHTML("Total Kills", playerStats.totalKills);
     totalDeaths.innerHTML = constructStatHTML("Total Deaths", playerStats.totalDeaths);
     accuracy.innerHTML = constructStatHTML("Accuracy", playerStats.accuracy());
-    modal.className = "is-open";
+    modal.classList.remove("loading");
   }
 
   /* Parse the API response and populate the player modal fields */
@@ -78,7 +82,10 @@
     responseJSON = JSON.parse(response);
     playerStats = new PlayerStats(playerName);
     playerStats.buildStatsFromJSON(responseJSON);
-    displayStats(playerStats);
+
+    setTimeout(function() {
+      displayStats(playerStats);
+    }, 1500);
   }
 
   /* Returns the stats API URL for the given app and player */
@@ -109,11 +116,12 @@
   }
 
   function handlePlayerSelect(event) {
-    var modal = document.getElementById("player-modal");
+    var modal = document.querySelector(".player-modal-wrapper");
     var playerId = event.target.dataset.playerId;
     var playerName = event.target.dataset.playerName;
 
-    modal.className = "is-open loading";
+    modal.classList.add("is-open");
+    modal.classList.add("loading");
     loadPlayerStats(playerId, playerName);
   }
 
