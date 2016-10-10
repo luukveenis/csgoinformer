@@ -23,7 +23,10 @@ title: "Professional CS:GO teams"
 
 <ul id="team-cloud-9" class="team-list">
   <li>
-    <span class="team-list-player">Stewie2k</span>
+    <% content_tag :span, class: "team-list-player",
+      data: { player_id: "76561197978078945", player_name: "Stewie2k" } do %>
+      Stewie2k
+    <% end %>
   </li>
 </ul>
 
