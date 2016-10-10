@@ -40,13 +40,8 @@
     }
   }
 
-  function nameFromAttribute(attribute) {
-    var name = attribute.replace(/([A-Z])/g, function (match) {
-      return " " + match[1];
-    })
-    return name.charAt(0).toUpperCase() + name.slice(1);
-  }
-
+  /* Generates the markup we want to insert into the placeholder elements in
+   * the player modal, using the value obtained from the API */
   function constructStatHTML(name, value) {
     result = [];
     result.push("<div class='stat-wrapper'>");
@@ -56,6 +51,8 @@
     return result.join("\n");
   }
 
+  /* Locates the player modal and all its placeholder elemements and then
+   * populates them using the PlayerStats object previously constructed. */
   function displayStats(playerStats) {
     var modal = document.querySelector(".player-modal-wrapper");
     var playerName = modal.querySelector("#player-name");
