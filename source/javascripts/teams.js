@@ -2,6 +2,8 @@
  * the global namespace
  */
 (function() {
+  var KEYCODE_ESCAPE = 27;
+
   /* Converts string from underscore to camel case
    * ie: my_string => myString */
   function underscoreToCamelCase(string) {
@@ -131,4 +133,11 @@
   for (let pe of playerElements) {
     pe.addEventListener("click", handlePlayerSelect);
   }
+
+  /* Close the player modal if the user presses the escape key */
+  document.body.addEventListener("keyup", function(event) {
+    if (event.keyCode == KEYCODE_ESCAPE) {
+      document.querySelector(".player-modal-wrapper").classList.remove("is-open");
+    }
+  });
 })();
