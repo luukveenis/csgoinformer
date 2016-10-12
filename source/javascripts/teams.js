@@ -188,6 +188,8 @@
     xhttp.send();
   }
 
+  /* Handler function for when a player name is clicked.
+   * Displays the modal with a loading icon and initiates the AJAX call */
   function handlePlayerSelect(event) {
     var playerId = event.currentTarget.dataset.playerId;
     var playerName = event.currentTarget.dataset.playerName;
