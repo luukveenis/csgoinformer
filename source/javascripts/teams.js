@@ -144,9 +144,12 @@
     playerStats = new PlayerStats(playerName);
     playerStats.buildStatsFromJSON(responseJSON);
 
+    /* Wait a second to display the stats. This is to demonstrate how worst-case
+     * response time is handled by displaying a loading icon. Normally the API
+     * responds so fast you wouldn't even see the spinner. */
     setTimeout(function() {
       displayStats(playerStats);
-    }, 1500);
+    }, 1000);
   }
 
   /* Returns the stats API URL for the given app and player */
