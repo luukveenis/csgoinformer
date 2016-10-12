@@ -48,6 +48,8 @@
   function PlayerModal(modal) {
     this.modal = modal;
 
+    /* Setter functions:
+     * The following set of functions are used to populate the modal fields */
     this.setName = function(nameText) {
       this.modal.querySelector("#player-name").innerHTML = nameText;
     }
@@ -75,23 +77,30 @@
     this.setAccuracy = function(accuracyText) {
       this.modal.querySelector("#accuracy").innerHTML = accuracyText;
     }
+    /* End of setter functions */
 
-    this.hide = function() {
-      this.modal.classList.remove("is-open");
-    }
-
+    /* Opens up the modal window */
     this.show = function() {
       this.modal.classList.add("is-open");
     }
 
+    /* Closes the modal window */
+    this.hide = function() {
+      this.modal.classList.remove("is-open");
+    }
+
+    /* Causes loading spinner to be displayed */
     this.startLoading = function() {
       this.modal.classList.add("loading");
     }
 
+    /* Removes the loading spinner */
     this.stopLoading = function() {
       this.modal.classList.remove("loading");
     }
 
+    /* Clears all modal fields, otherwise we would see the previous player's
+     * stats after the first time we select a player. */
     this.clear = function() {
       this.setName("");
       this.setHours("");
