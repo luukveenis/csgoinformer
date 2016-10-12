@@ -3,6 +3,7 @@
  */
 (function() {
   var KEYCODE_ESCAPE = 27;
+  var PLAYER_MODAL = new PlayerModal(document.querySelector(".player-modal-wrapper"));
 
   /* Converts string from underscore to camel case
    * ie: my_string => myString */
@@ -42,6 +43,66 @@
     }
   }
 
+  /* Utility class to wrap modifications to the player modal. This avoids
+   * having to find the required fields each time. */
+  function PlayerModal(modal) {
+    this.modal = modal;
+
+    this.setName = function(nameText) {
+      this.modal.querySelector("#player-name").innerHTML = nameText;
+    }
+
+    this.setHours = function(hoursText) {
+      this.modal.querySelector("#hours-played").innerHTML = hoursText;
+    }
+
+    this.setMatchesWon = function(matchesWonText) {
+      this.modal.querySelector("#matches-won").innerHTML = matchesWonText;
+    }
+
+    this.setMatchesPlayed = function(matchesPlayedText) {
+      this.modal.querySelector("#matches-played").innerHTML = matchesPlayedText;
+    }
+
+    this.setTotalKills = function(totalKillsText) {
+      this.modal.querySelector("#total-kills").innerHTML = totalKillsText;
+    }
+
+    this.setTotalDeaths = function(totalDeathsText) {
+      this.modal.querySelector("#total-deaths").innerHTML = totalDeathsText;
+    }
+
+    this.setAccuracy = function(accuracyText) {
+      this.modal.querySelector("#accuracy").innerHTML = accuracyText;
+    }
+
+    this.hide = function() {
+      this.modal.classList.remove("is-open");
+    }
+
+    this.show = function() {
+      this.modal.classList.add("is-open");
+    }
+
+    this.startLoading = function() {
+      this.modal.classList.add("loading");
+    }
+
+    this.stopLoading = function() {
+      this.modal.classList.remove("loading");
+    }
+
+    this.clear = function() {
+      this.setName("");
+      this.setHours("");
+      this.setMatchesWon("");
+      this.setMatchesPlayed("");
+      this.setTotalKills("");
+      this.setTotalDeaths("");
+      this.setAccuracy("");
+    }
+  }
+
   /* Generates the markup we want to insert into the placeholder elements in
    * the player modal, using the value obtained from the API */
   function constructStatHTML(name, value) {
@@ -56,24 +117,16 @@
   /* Locates the player modal and all its placeholder elemements and then
    * populates them using the PlayerStats object previously constructed. */
   function displayStats(playerStats) {
-    var modal = document.querySelector(".player-modal-wrapper");
-    var playerName = modal.querySelector("#player-name");
-    var hoursPlayed = modal.querySelector("#hours-played");
-    var matchesWon = modal.querySelector("#matches-won");
-    var matchesPlayed = modal.querySelector("#matches-played");
-    var totalKills = modal.querySelector("#total-kills");
-    var totalDeaths = modal.querySelector("#total-deaths");
-    var accuracy = modal.querySelector("#accuracy");
     var hours = Math.round(playerStats.hoursPlayed());
 
-    playerName.innerHTML = "<h1>" + playerStats.name + "</h1>"
-    hoursPlayed.innerHTML = constructStatHTML("Hours Played", hours);
-    matchesWon.innerHTML = constructStatHTML("Matches Won", playerStats.totalMatchesWon);
-    matchesPlayed.innerHTML = constructStatHTML("Matches Played", playerStats.totalMatchesPlayed);
-    totalKills.innerHTML = constructStatHTML("Total Kills", playerStats.totalKills);
-    totalDeaths.innerHTML = constructStatHTML("Total Deaths", playerStats.totalDeaths);
-    accuracy.innerHTML = constructStatHTML("Accuracy", playerStats.accuracy());
-    modal.classList.remove("loading");
+    PLAYER_MODAL.setName("<h1>" + playerStats.name + "</h1>");
+    PLAYER_MODAL.setHours(constructStatHTML("Hours Played", hours));
+    PLAYER_MODAL.setMatchesWon(constructStatHTML("Matches Won", playerStats.totalMatchesWon));
+    PLAYER_MODAL.setMatchesPlayed(constructStatHTML("Matches Played", playerStats.totalMatchesPlayed));
+    PLAYER_MODAL.setTotalKills(constructStatHTML("Total Kills", playerStats.totalKills));
+    PLAYER_MODAL.setTotalDeaths(constructStatHTML("Total Deaths", playerStats.totalDeaths));
+    PLAYER_MODAL.setAccuracy(constructStatHTML("Accuracy", playerStats.accuracy()));
+    PLAYER_MODAL.stopLoading();
   }
 
   /* Parse the API response and populate the player modal fields */
@@ -115,12 +168,12 @@
   }
 
   function handlePlayerSelect(event) {
-    var modal = document.querySelector(".player-modal-wrapper");
     var playerId = event.currentTarget.dataset.playerId;
     var playerName = event.currentTarget.dataset.playerName;
 
-    modal.classList.add("is-open");
-    modal.classList.add("loading");
+    PLAYER_MODAL.clear();
+    PLAYER_MODAL.startLoading();
+    PLAYER_MODAL.show();
     loadPlayerStats(playerId, playerName);
   }
 
@@ -143,16 +196,15 @@
   /* Close the player modal if the user presses the escape key */
   document.body.addEventListener("keyup", function(event) {
     if (event.keyCode == KEYCODE_ESCAPE) {
-      document.querySelector(".player-modal-wrapper").classList.remove("is-open");
+      PLAYER_MODAL.hide();
     }
   });
 
   /* Add an event listener for any click on the modal, closing the modal if the
    * user clicked on the X or anywhere outside of it. */
-  var modal = document.querySelector(".player-modal-wrapper");
-  modal.addEventListener("click", function(event) {
+  PLAYER_MODAL.modal.addEventListener("click", function(event) {
     if (shouldCloseModal(event)) {
-      modal.classList.remove("is-open");
+      PLAYER_MODAL.hide();
     }
   });
 })();
