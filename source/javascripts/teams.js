@@ -124,7 +124,12 @@
     loadPlayerStats(playerId, playerName);
   }
 
-  var playerElements = document.querySelectorAll(".team-list-player")
+  /* Determines if the modal should be closed depending on where the user clicked.
+   * If the user clicked on the X or outside the modal, we should close it. */
+  function shouldCloseModal(clickEvent) {
+    var classes = clickEvent.target.classList;
+    return classes.contains("player-modal-wrapper") || classes.contains("player-modal-close");
+  }
 
   /* Add event listeners to the click event on all players elements. When a
    * player name/thumbnail is clicked, we open a modal with their stats which
@@ -138,6 +143,15 @@
   document.body.addEventListener("keyup", function(event) {
     if (event.keyCode == KEYCODE_ESCAPE) {
       document.querySelector(".player-modal-wrapper").classList.remove("is-open");
+    }
+  });
+
+  /* Add an event listener for any click on the modal, closing the modal if the
+   * user clicked on the X or anywhere outside of it. */
+  var modal = document.querySelector(".player-modal-wrapper");
+  modal.addEventListener("click", function(event) {
+    if (shouldCloseModal(event)) {
+      modal.classList.remove("is-open");
     }
   });
 })();
