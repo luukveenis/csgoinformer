@@ -152,6 +152,14 @@
     }, 1000);
   }
 
+  /* Displays an error message in the modal */
+  function displayErrorMessage(playerName) {
+    errorText = "<h3>";
+    errorText += "Failed to retrieve stats for player '" + playerName + "'";
+    errorText += "</h3>"
+    PLAYER_MODAL.setName(errorText);
+  }
+
   /* Returns the stats API URL for the given app and player */
   function playerStatsUrl(appId, playerId) {
     return "//luuk.freerunningtech.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=" +
@@ -171,7 +179,8 @@
         if (this.status == 200) {
           processStats(playerName, this.responseText);
         } else {
-          // handle failure
+          PLAYER_MODAL.stopLoading();
+          displayErrorMessage(playerName);
         }
       }
     }
