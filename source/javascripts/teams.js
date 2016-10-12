@@ -45,58 +45,58 @@
 
   /* Utility class to wrap modifications to the player modal. This avoids
    * having to find the required fields each time. */
-  function PlayerModal(modal) {
-    this.modal = modal;
+  function PlayerModal(modalElement) {
+    this.element = modalElement;
 
     /* Setter functions:
      * The following set of functions are used to populate the modal fields */
     this.setName = function(nameText) {
-      this.modal.querySelector("#player-name").innerHTML = nameText;
+      this.element.querySelector("#player-name").innerHTML = nameText;
     }
 
     this.setHours = function(hoursText) {
-      this.modal.querySelector("#hours-played").innerHTML = hoursText;
+      this.element.querySelector("#hours-played").innerHTML = hoursText;
     }
 
     this.setMatchesWon = function(matchesWonText) {
-      this.modal.querySelector("#matches-won").innerHTML = matchesWonText;
+      this.element.querySelector("#matches-won").innerHTML = matchesWonText;
     }
 
     this.setMatchesPlayed = function(matchesPlayedText) {
-      this.modal.querySelector("#matches-played").innerHTML = matchesPlayedText;
+      this.element.querySelector("#matches-played").innerHTML = matchesPlayedText;
     }
 
     this.setTotalKills = function(totalKillsText) {
-      this.modal.querySelector("#total-kills").innerHTML = totalKillsText;
+      this.element.querySelector("#total-kills").innerHTML = totalKillsText;
     }
 
     this.setTotalDeaths = function(totalDeathsText) {
-      this.modal.querySelector("#total-deaths").innerHTML = totalDeathsText;
+      this.element.querySelector("#total-deaths").innerHTML = totalDeathsText;
     }
 
     this.setAccuracy = function(accuracyText) {
-      this.modal.querySelector("#accuracy").innerHTML = accuracyText;
+      this.element.querySelector("#accuracy").innerHTML = accuracyText;
     }
     /* End of setter functions */
 
     /* Opens up the modal window */
     this.show = function() {
-      this.modal.classList.add("is-open");
+      this.element.classList.add("is-open");
     }
 
     /* Closes the modal window */
     this.hide = function() {
-      this.modal.classList.remove("is-open");
+      this.element.classList.remove("is-open");
     }
 
     /* Causes loading spinner to be displayed */
     this.startLoading = function() {
-      this.modal.classList.add("loading");
+      this.element.classList.add("loading");
     }
 
     /* Removes the loading spinner */
     this.stopLoading = function() {
-      this.modal.classList.remove("loading");
+      this.element.classList.remove("loading");
     }
 
     /* Clears all modal fields, otherwise we would see the previous player's
@@ -225,7 +225,7 @@
 
   /* Add an event listener for any click on the modal, closing the modal if the
    * user clicked on the X or anywhere outside of it. */
-  PLAYER_MODAL.modal.addEventListener("click", function(event) {
+  PLAYER_MODAL.element.addEventListener("click", function(event) {
     if (shouldCloseModal(event)) {
       PLAYER_MODAL.hide();
     }
