@@ -116,8 +116,8 @@
 
   function handlePlayerSelect(event) {
     var modal = document.querySelector(".player-modal-wrapper");
-    var playerId = event.target.dataset.playerId;
-    var playerName = event.target.dataset.playerName;
+    var playerId = event.currentTarget.dataset.playerId;
+    var playerName = event.currentTarget.dataset.playerName;
 
     modal.classList.add("is-open");
     modal.classList.add("loading");
@@ -135,6 +135,7 @@
    * player name/thumbnail is clicked, we open a modal with their stats which
    * gets populated by calling Steam's Web API.
    */
+  var playerElements = document.querySelectorAll(".team-list-player")
   for (let pe of playerElements) {
     pe.addEventListener("click", handlePlayerSelect);
   }
