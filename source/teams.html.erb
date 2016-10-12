@@ -79,14 +79,6 @@ title: "Professional CS:GO teams"
             <td>USA</td>
             <td>2016-04-23</td>
           <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197960426102", player_name: "Irukandji" } do %>
-            <td>Irukandji</td>
-            <td>Andrew Timmerman</td>
-            <td>Coach</td>
-            <td>USA</td>
-            <td>2016-03-24</td>
-          <% end %>
         </tbody>
       </table>
     </div>
@@ -111,41 +103,46 @@ title: "Professional CS:GO teams"
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561197960784488", player_name: "reltuC" } do %>
             <td>reltuC</td>
             <td>Stephen Cutler</td>
             <td>IGL / Rifler</td>
             <td>USA</td>
             <td>2015-01-16</td>
-          </tr>
-          <tr>
+          <% end %>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561197990571509", player_name: "hazed" } do %>
             <td>hazed</td>
             <td>James Cobb</td>
             <td>Rifler / Entry Fragger</td>
             <td>USA</td>
             <td>2015-01-16</td>
-          </tr>
-          <tr>
-            <td>tarik</td>
-            <td>Tarik Celik</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>USA / Turkey</td>
-            <td>2015-01-16</td>
-          </tr>
-          <tr>
+          <% end %>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561198129443530", player_name: "nahtE" } do %>
+            <td>nahtE</td>
+            <td>Ethan Arnold</td>
+            <td>Rifler</td>
+            <td>USA</td>
+            <td>2016-08-17</td>
+          <% end %>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561197960427318", player_name: "koosta" } do %>
             <td>koosta</td>
             <td>Kenneth Suen</td>
             <td>AWPer</td>
             <td>USA</td>
             <td>2016-06-13</td>
-          </tr>
-          <tr>
-            <td>pita</td>
-            <td>Faruk Pita</td>
-            <td>Coach / Stand-in</td>
-            <td>Bosnia and Herzegovina / Sweden</td>
-            <td>2015-12-06</td>
-          </tr>
+          <% end %>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561198072264947", player_name: "Subroza" } do %>
+            <td>Subroza</td>
+            <td>Yassine Taoufik</td>
+            <td>Rifler</td>
+            <td>Canada</td>
+            <td>2016-08-17</td>
+          <% end %>
         </tbody>
       </table>
     </div>
