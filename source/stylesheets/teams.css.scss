@@ -1,0 +1,103 @@
+@import "variables";
+
+$modal-layover-color: #111;
+$modal-background-color: #333;
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -mswebkit-transform: $transforms;
+  transform: $transforms;
+}
+
+.team-list-player:hover { cursor: pointer; }
+
+.player-modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($modal-layover-color, 0.8);
+  overflow: hidden;
+  z-index: 99999;
+  box-sizing: border-box;
+
+  &:not(.is-open) {
+    display: none;
+  }
+
+  &.loading {
+    .spinner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      display: block;
+      width: 64px;
+      height: 64px;
+      background-image: image_url("spinner.gif");
+      content: "";
+    }
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}
+
+.player-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+  background-color: $modal-background-color;
+  width: 700px;
+  max-width: 100%;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px 0 rgba($background-dark-2, 0.2);
+  color: #eee;
+
+  .player-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #999;
+    font-size: 1.6rem;
+
+    &:hover {
+      color: $link-hover-color;
+      cursor: pointer;
+    }
+  }
+
+  #player-name {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .stat-wrapper {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .stat-name,
+  .stat-value {
+    color: #aaa;
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .stat-name {
+    font-weight: bold;
+  }
+
+  .stat-value {
+    float: right;
+  }
+}
