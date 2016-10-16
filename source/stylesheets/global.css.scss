@@ -46,6 +46,30 @@ body {
   }
 }
 
+.dropdown-menu {
+  background-color: $background-hover;
+  padding: 0;
+
+  li {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &:first-child {
+      padding-top: 10px;
+    }
+
+    &:last-child {
+      padding-bottom: 10px;
+    }
+
+    &:hover {
+      background-color: $background-dark-2;
+      a { color: $text-lighter; }
+    }
+  }
+}
+
 .page-title {
   margin: 2rem 0;
 }
