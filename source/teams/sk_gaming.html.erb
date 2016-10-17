@@ -1,0 +1,77 @@
+---
+title: "SK Gaming - Professional CS:GO Team"
+---
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag "teams" %>
+<% end %>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "teams" %>
+<% end %>
+
+<h1>SK Gaming</h1>
+
+<!-- ======= SK Gaming ======= -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-hover table-inverse">
+        <thead>
+          <tr>
+            <th class="table-title" colspan="5">SK Gaming</th>
+          </tr>
+          <tr>
+            <th>Steam ID</th>
+            <th>Name</th>
+            <th>Roles</th>
+            <th>Country</th>
+            <th>Join Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561197960690195", player_name: "FalleN" } do %>
+            <td>FalleN</td>
+            <td>Gabriel Toledo</td>
+            <td>IGL / AWPer</td>
+            <td>Brazil</td>
+            <td>2016-07-01</td>
+          <% end %>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561197999186947", player_name: "fer" } do %>
+            <td>fer</td>
+            <td>Fernando Alvarenga</td>
+            <td>Rifler / Entry Fragger</td>
+            <td>Brazil</td>
+            <td>2016-07-01</td>
+          <% end %>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561198039986599", player_name: "coldzera" } do %>
+            <td>coldzera</td>
+            <td>Marcelo David</td>
+            <td>Rifler / AWPer</td>
+            <td>Brazil</td>
+            <td>2016-07-01</td>
+          <% end %>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561198130444302", player_name: "fnx" } do %>
+            <td>fnx</td>
+            <td>Lincoln Lau</td>
+            <td>Rifler / Lurker / Entry Fragger</td>
+            <td>Brazil</td>
+            <td>2016-07-01</td>
+          <% end %>
+          <% content_tag :tr, class: "team-list-player",
+            data: { player_id: "76561198013142296", player_name: "TACO" } do %>
+            <td>TACO</td>
+            <td>Epitácio de Melo</td>
+            <td>Rifler / Entry Fragger</td>
+            <td>Brazil</td>
+            <td>2016-07-01</td>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%= partial "teams/player_modal" %>
