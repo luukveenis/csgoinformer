@@ -29,8 +29,8 @@ activate :relative_assets
 # Methods defined in the helpers block are available in templates
 helpers do
   def nav_item text: "", path: "", &block
-    base_name = File.basename(path, ".html")
-    base_path = File.basename(current_page.path, ".html")
+    base_name = path.gsub(".html", "")
+    base_path = current_page.path.gsub(".html", "")
     active_class = base_path =~ /#{base_name}/ ? "active" : ""
     active_class += " dropdown" if block_given?
 

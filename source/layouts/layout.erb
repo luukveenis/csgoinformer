@@ -21,16 +21,27 @@
           <ul class="nav navbar-nav">
             <%= nav_item text: "Home", path: "index.html" %>
             <%= nav_item text: "About", path: "about.html" %>
-            <%= nav_item text: "Teams", path: "teams.html" %>
+            <% nav_item path: "teams" do %>
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                Teams
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/teams/clg.html">CLG</a></li>
+                <li><a href="/teams/cloud9.html">Cloud9</a></li>
+                <li><a href="/teams/sk_gaming.html">SK Gaming</a></li>
+                <li><a href="/teams/team_liquid.html">Team Liquid</a></li>
+              </ul>
+            <% end %>
             <% nav_item path: "contact" do %>
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
                 Contact
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="contact.html">About the Author</a></li>
-                <li><a href="contact_general.html">General Inquiries</a></li>
-                <li><a href="contact_player.html">Update Profile</a></li>
+                <li><a href="/contact.html">About the Author</a></li>
+                <li><a href="/contact_general.html">General Inquiries</a></li>
+                <li><a href="/contact_player.html">Update Profile</a></li>
               </ul>
             <% end %>
           </ul>
