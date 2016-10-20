@@ -3,17 +3,28 @@ title: "Counter Logic Gaming - Professional CS:GO Team"
 ---
 <% content_for :stylesheets do %>
   <%= stylesheet_link_tag "teams" %>
+  <%= stylesheet_link_tag "slick" %>
+  <%= stylesheet_link_tag "slick-theme" %>
 <% end %>
 <% content_for :javascripts do %>
-  <%= javascript_include_tag "teams" %>
   <%= javascript_include_tag "slick.min.js" %>
+  <%= javascript_include_tag "teams" %>
 <% end %>
 
-<h1>Counter Logic Gaming</h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="teams-carousel">
+      <!-- https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Counter_Logic_Gaming_logo.svg/1280px-Counter_Logic_Gaming_logo.svg.png -->
+      <div><%= image_tag "teams/clg1.png" %></div>
+      <!-- https://images.gamurs.com/article/05918eec-fc1e-4005-ae2b-9740edf2beb9.jpg -->
+      <div><%= image_tag "teams/clg2.jpg" %></div>
+    </div>
+  </div>
+</div>
 
 <!-- ======= Counter Logic Gaming ======= -->
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-10 col-md-offset-1">
     <div class="table-responsive">
       <table class="table table-hover table-inverse">
         <thead>
