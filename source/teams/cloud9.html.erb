@@ -3,17 +3,28 @@ title: "Cloud9 - Professional CS:GO Team"
 ---
 <% content_for :stylesheets do %>
   <%= stylesheet_link_tag "teams" %>
+  <%= stylesheet_link_tag "slick" %>
+  <%= stylesheet_link_tag "slick-theme" %>
 <% end %>
 <% content_for :javascripts do %>
-  <%= javascript_include_tag "teams" %>
   <%= javascript_include_tag "slick.min.js" %>
+  <%= javascript_include_tag "teams" %>
 <% end %>
 
-<h1>Cloud9</h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="teams-carousel">
+      <!-- https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Cloud9_logo.svg/1280px-Cloud9_logo.svg.png -->
+      <div><%= image_tag "teams/cloud9_1.png" %></div>
+      <!-- https://pbs.twimg.com/media/Cs8_J7HXEAA7rqa.jpg -->
+      <div><%= image_tag "teams/cloud9_2.jpg" %></div>
+    </div>
+  </div>
+</div>
 
 <!-- ======= Cloud9 ======= -->
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-10 col-md-offset-1">
     <div class="table-responsive">
       <table class="table table-hover table-inverse">
         <thead>
