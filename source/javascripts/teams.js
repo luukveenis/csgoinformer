@@ -231,6 +231,9 @@
     }
   });
 
+  /* Initialize the image carousel on team pages
+   * For more configuration options, please see:
+   * http://kenwheeler.github.io/slick/ */
   $(".teams-carousel").slick({
     dots: true,
     autoplay: true,
