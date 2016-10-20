@@ -1,3 +1,12 @@
+/* This piece of JavaScript code controls all the functionality on the
+ * various Teams pages. It allows users to click player names, which opens a
+ * modal and loads player stats from Valve's web API. It also creates an
+ * image carousel using Slick.
+ *
+ * Author: Luuk Veenis
+ * Date: October 2, 2016
+ */
+
 /* Wrap everything in an IIFE to avoid leaking functions and variables into
  * the global namespace
  */
