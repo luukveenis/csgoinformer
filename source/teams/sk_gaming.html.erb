@@ -3,17 +3,26 @@ title: "SK Gaming - Professional CS:GO Team"
 ---
 <% content_for :stylesheets do %>
   <%= stylesheet_link_tag "teams" %>
+  <%= stylesheet_link_tag "slick" %>
+  <%= stylesheet_link_tag "slick-theme" %>
 <% end %>
 <% content_for :javascripts do %>
-  <%= javascript_include_tag "teams" %>
   <%= javascript_include_tag "slick.min.js" %>
+  <%= javascript_include_tag "teams" %>
 <% end %>
 
-<h1>SK Gaming</h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="teams-carousel">
+      <div><%= image_tag "teams/sk_gaming1.jpg" %></div>
+      <div><%= image_tag "teams/sk_gaming2.jpg" %></div>
+    </div>
+  </div>
+</div>
 
 <!-- ======= SK Gaming ======= -->
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-10 col-md-offset-1">
     <div class="table-responsive">
       <table class="table table-hover table-inverse">
         <thead>

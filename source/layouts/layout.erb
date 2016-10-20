@@ -8,10 +8,6 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "CS:GO Informer - Counter Strike news, tips, and tutorials" %></title>
     <%= stylesheet_link_tag "site", "global" %>
-    <%= javascript_include_tag "jquery-3.1.1.min.js" %>
-    <%= javascript_include_tag "tether.min.js" %>
-    <%= javascript_include_tag "bootstrap.min.js" %>
-    <%= javascript_include_tag "slick.min.js" %>
     <%= yield_content :stylesheets %>
   </head>
 
@@ -94,6 +90,9 @@
         </footer>
       </div>
     </div>
+    <%= javascript_include_tag "jquery-3.1.1.min.js" %>
+    <%= javascript_include_tag "tether.min.js" %>
+    <%= javascript_include_tag "bootstrap.min.js" %>
     <%= yield_content :javascripts %>
   </body>
 </html>
