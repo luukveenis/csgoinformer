@@ -20,7 +20,32 @@ $modal-background-color: #333;
   }
 }
 
-.team-list-player:hover { cursor: pointer; }
+.teams-list {
+  list-style: none;
+}
+
+.teams-list-team {
+  a {
+    display: block;
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  span {
+    margin-left: 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
+.teams-list-team + .teams-list-team {
+  margin-top: 2rem;
+}
+
+.players-list-player:hover { cursor: pointer; }
 
 .player-modal-wrapper {
   position: fixed;

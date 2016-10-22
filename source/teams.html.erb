@@ -15,11 +15,31 @@ title: "Professional CS:GO teams"
         have recently qualified for a major Counter Strike : Global Offensive event.
       </p>
 
-      <ul>
-        <li><a href="teams/clg.html">Counter Logic Gaming</a></li>
-        <li><a href="teams/cloud9.html">Cloud9</a></li>
-        <li><a href="teams/team_liquid.html">Team Liquid</a></li>
-        <li><a href="teams/sk_gaming.html">SK Gaming</a></li>
+      <ul class="teams-list">
+        <li class="teams-list-team">
+          <% link_to "teams/clg.html" do %>
+            <%= image_tag "teams/clg_logo.jpg" %>
+            <span class="teams-list-name">Counter Logic Gaming</span>
+          <% end %>
+        </li>
+        <li class="teams-list-team">
+          <% link_to "teams/cloud9.html" do %>
+            <%= image_tag "teams/cloud9_logo.jpg" %>
+            <span class="teams-list-name">Cloud9</span>
+          <% end %>
+        </li>
+        <li class="teams-list-team">
+          <% link_to "teams/team_liquid.html" do %>
+            <%= image_tag "teams/team_liquid_logo.png" %>
+            <span class="teams-list-name">Team Liquid</span>
+          <% end %>
+        </li>
+        <li class="teams-list-team">
+          <% link_to "teams/sk_gaming.html" do %>
+            <%= image_tag "teams/sk_logo.jpg" %>
+            <span class="teams-list-name">SK Gaming</span>
+          <% end %>
+        </li>
     </div>
   </div>
 </div>
