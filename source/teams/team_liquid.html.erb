@@ -14,10 +14,20 @@ title: "Team Liquid - Professional CS:GO Team"
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
     <div class="teams-carousel">
-      <!-- https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Team_Liquid_logo.svg/1280px-Team_Liquid_logo.svg.png -->
-      <div><%= image_tag "teams/team_liquid1.png" %></div>
-      <!-- https://pbs.twimg.com/media/Cu__8csVMAAyIWi.jpg -->
-      <div><%= image_tag "teams/team_liquid2.jpg" %></div>
+      <figure>
+        <%= image_tag "teams/team_liquid1.png" %>
+        <figcaption>
+          Image credit
+          <%= link_to "Wikipedia", "https://en.wikipedia.org/wiki/Team_Liquid" %>
+        </figcaption>
+      </figure>
+      <figure>
+        <%= image_tag "teams/team_liquid2.jpg" %>
+        <figcaption>
+          Image credit
+          <%= link_to "Twitter", "https://twitter.com/TeamLiquid" %>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </div>
