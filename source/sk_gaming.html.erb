@@ -77,77 +77,182 @@ title: "SK Gaming - Professional CS:GO Team"
           </div>
           <div class="col-md-7">
             FalleN is well known within the CS:GO community as one of the best
-            in game leaders in the world. He has led his team to victory in 3
+            In Game Leaders in the world. He has led his team to victory in 3
             major titles, as well as numerous smaller tournaments. Even more
             impressive is that FalleN manages this while also consistently
             maintaining a position at the top of the scoreboard as one of the
             top AWPers.
           </div>
         </div>
-    </div>
-  </div>
-</div>
-
-<!-- ======= SK Gaming ======= -->
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <div class="table-responsive">
-      <table class="table table-hover table-inverse">
-        <thead>
-          <tr>
-            <th class="table-title" colspan="5">SK Gaming</th>
-          </tr>
-          <tr>
-            <th>Steam ID</th>
-            <th>Name</th>
-            <th>Roles</th>
-            <th>Country</th>
-            <th>Join Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197960690195", player_name: "FalleN" } do %>
-            <td>FalleN</td>
-            <td>Gabriel Toledo</td>
-            <td>IGL / AWPer</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197999186947", player_name: "fer" } do %>
-            <td>fer</td>
-            <td>Fernando Alvarenga</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561198039986599", player_name: "coldzera" } do %>
-            <td>coldzera</td>
-            <td>Marcelo David</td>
-            <td>Rifler / AWPer</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561198130444302", player_name: "fnx" } do %>
-            <td>fnx</td>
-            <td>Lincoln Lau</td>
-            <td>Rifler / Lurker / Entry Fragger</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561198013142296", player_name: "TACO" } do %>
-            <td>TACO</td>
-            <td>Epitácio de Melo</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-        </tbody>
-      </table>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/fer.png" %>
+          <span>fer</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Fernando Alvarenga</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>Brazil</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler / Entry Fragger</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-07-01</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197999186947", player_name: "fer" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Fer, like most players on the SK team, has been part of the group
+            since before their time playing under the Luminosity Gaming banner
+            even. His primary role is entry fragging, meaning he usually leads
+            the charge and looks for opening kills. He has an incredible ability
+            to open up rounds for his team by overrunning defenders holding a
+            bomb site.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/coldzera.png" %>
+          <span>coldzera</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Marcelo David</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>Brazil</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler / AWPer</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-07-01</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561198039986599", player_name: "coldzera" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Coldzera has also been with SK Gaming since before their time
+            playing for the Luminosity Gaming organization. He is widely
+            regarded as one of the best all around players in the world. He is
+            incredibly versatile, playing equally well as a rifler or AWPer,
+            and can often be found out fragging everyone on the server.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/fnx.png" %>
+          <span>fnx</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Lincoln Lau</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>Brazil</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler / Lurker / Entry Fragger</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-07-01</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561198130444302", player_name: "fnx" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            fnx is the one of SK Gaming's primary riflers. The earliest
+            championship he won in his Counter Strike career was ESWC in 2006
+            at a young age. His teams dominated in Brazil and he ultimately
+            joined the rest of the guys when they played as Luminosity Gaming.
+            He always plays the lurker role, meaning when his team attacks a
+            place on the map, he's hanging back trying to flank around behind
+            the enemy team.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/taco.png" %>
+          <span>TACO</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Epitácio de Melo</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>Brazil</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler / Entry Fragger</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-07-01</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561198013142296", player_name: "TACO" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            TACO is another of SK Gaming's primary riflers, meaning his primary
+            role is eliminating the enemy team. The challenge in this role for
+            many players is consistency. However, TACO always seems to step up,
+            escpecially when the pressure is on in clutch situations. It's not
+            uncommon to see him win 1v2, 1v3, or even 1v4 scenarios in
+            tournaments, often turning an entire game around for his team.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
