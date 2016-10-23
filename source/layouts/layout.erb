@@ -14,7 +14,11 @@
   <body class="<%= page_classes %>">
     <div class="page-wrapper">
       <nav class="navbar navbar-full navbar-dark">
-        <div class="container">
+        <button id="nav-toggle" class="hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="container collapse navbar-toggleable-md" id="navbarResponsive">
           <ul class="nav navbar-nav">
             <%= nav_item text: "Home", path: "index.html" %>
             <%= nav_item text: "About", path: "about.html" %>
