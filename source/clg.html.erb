@@ -1,5 +1,5 @@
 ---
-title: "Cloud9 - Professional CS:GO Team"
+title: "Counter Logic Gaming - Professional CS:GO Team"
 ---
 <% content_for :stylesheets do %>
   <%= stylesheet_link_tag "teams" %>
@@ -15,31 +15,31 @@ title: "Cloud9 - Professional CS:GO Team"
   <div class="col-md-8 col-md-offset-2">
     <div class="teams-carousel">
       <figure>
-        <%= image_tag "teams/cloud9_1.png" %>
+        <%= image_tag "teams/clg1.png" %>
         <figcaption>
           Image credit
-          <%= link_to "Wikipedia", "https://en.wikipedia.org/wiki/Cloud9_(eSports)" %>
+          <%= link_to "Wikipedia", "https://en.wikipedia.org/wiki/Counter_Logic_Gaming" %>
         </figcaption>
       </figure>
       <figure>
-        <%= image_tag "teams/cloud9_2.jpg" %>
+        <%= image_tag "teams/clg2.jpg" %>
         <figcaption>
           Image credit
-          <%= link_to "Twitter", "https://twitter.com/cloud9" %>
+          <%= link_to "@ESLCS", "https://twitter.com/ESLCS" %>
         </figcaption>
       </figure>
     </div>
   </div>
 </div>
 
-<!-- ======= Cloud9 ======= -->
+<!-- ======= Counter Logic Gaming ======= -->
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
     <div class="table-responsive">
       <table class="table table-hover table-inverse">
         <thead>
           <tr>
-            <th class="table-title" colspan="5">Cloud9</th>
+            <th class="table-title" colspan="5">Counter Logic Gaming</th>
           </tr>
           <tr>
             <th>Steam ID</th>
@@ -51,44 +51,44 @@ title: "Cloud9 - Professional CS:GO Team"
         </thead>
         <tbody>
           <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197961021014", player_name: "n0thing" } do %>
-            <td>n0thing</td>
-            <td>Jordan Gilbert</td>
-            <td>IGL / Rifler / Lurker</td>
-            <td>USA</td>
-            <td>2014-08-01</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197964781654", player_name: "shroud" } do %>
-            <td>shroud</td>
-            <td>Michael Grzesiek</td>
-            <td>Rifler</td>
-            <td>Canada / Poland</td>
-            <td>2014-08-01</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197981341453", player_name: "Skadoodle" } do %>
-            <td>Skadoodle</td>
-            <td>Tyler Latham</td>
-            <td>AWPer</td>
-            <td>USA</td>
-            <td>2015-04-29</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197999004010", player_name: "Stewie2k" } do %>
-            <td>Stewie2k</td>
-            <td>Jake Yip</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>USA</td>
-            <td>2016-01-11</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561198054870849", player_name: "autimatic" } do %>
-            <td>Autimatic</td>
-            <td>Alec White</td>
+            data: { player_id: "76561197960784488", player_name: "reltuC" } do %>
+            <td>reltuC</td>
+            <td>Stephen Cutler</td>
             <td>IGL / Rifler</td>
             <td>USA</td>
-            <td>2016-04-23</td>
+            <td>2015-01-16</td>
+          <% end %>
+          <% content_tag :tr, class: "players-list-player",
+            data: { player_id: "76561197990571509", player_name: "hazed" } do %>
+            <td>hazed</td>
+            <td>James Cobb</td>
+            <td>Rifler / Entry Fragger</td>
+            <td>USA</td>
+            <td>2015-01-16</td>
+          <% end %>
+          <% content_tag :tr, class: "players-list-player",
+            data: { player_id: "76561198129443530", player_name: "nahtE" } do %>
+            <td>nahtE</td>
+            <td>Ethan Arnold</td>
+            <td>Rifler</td>
+            <td>USA</td>
+            <td>2016-08-17</td>
+          <% end %>
+          <% content_tag :tr, class: "players-list-player",
+            data: { player_id: "76561197960427318", player_name: "koosta" } do %>
+            <td>koosta</td>
+            <td>Kenneth Suen</td>
+            <td>AWPer</td>
+            <td>USA</td>
+            <td>2016-06-13</td>
+          <% end %>
+          <% content_tag :tr, class: "players-list-player",
+            data: { player_id: "76561198072264947", player_name: "Subroza" } do %>
+            <td>Subroza</td>
+            <td>Yassine Taoufik</td>
+            <td>Rifler</td>
+            <td>Canada</td>
+            <td>2016-08-17</td>
           <% end %>
         </tbody>
       </table>
@@ -96,4 +96,4 @@ title: "Cloud9 - Professional CS:GO Team"
   </div>
 </div>
 
-<%= partial "teams/player_modal" %>
+<%= partial "player_modal" %>

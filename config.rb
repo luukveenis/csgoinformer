@@ -27,11 +27,14 @@ activate :relative_assets
 ###
 
 # Methods defined in the helpers block are available in templates
+TEAMS = %w[clg cloud9 team_liquid sk_gaming]
+
 helpers do
   def nav_item text: "", path: "", &block
     base_name = path.gsub(".html", "")
     base_path = current_page.path.gsub(".html", "")
     active_class = base_path =~ /#{base_name}/ ? "active" : ""
+    active_class = "active" if (TEAMS.include?(base_path) && base_name == "teams")
     active_class += " dropdown" if block_given?
 
     if block_given?
