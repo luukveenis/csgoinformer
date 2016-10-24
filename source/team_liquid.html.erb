@@ -28,78 +28,240 @@ title: "Team Liquid - Professional CS:GO Team"
           <%= link_to "Twitter", "https://twitter.com/TeamLiquid" %>
         </figcaption>
       </figure>
+      <figure>
+        <%= image_tag "teams/team_liquid3.jpg" %>
+        <figcaption>
+          Image credit
+          <%= link_to "Team Liquid", "https://www.teamliquidpro.com/news/2016/10/02/one-crazy-day-in-new-york-city" %>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </div>
 
-<!-- ======= Team Liquid ======= -->
+<div class="team-title">
+  <h1>Team Liquid</h1>
+  <p class="player-images-disclaimer">
+    Player images borrowed from Twitter:
+    <a href="https://twitter.com/Liquidnitr0">@Liquidnitr0</a>,
+    <a href="https://twitter.com/LiquidEliGE">@LiquidEliGE</a>,
+    <a href="https://twitter.com/Liquid_Hiko">@Liquid_Hiko</a>,
+    <a href="https://twitter.com/liquid_jdm">@Liquid_jdm</a>,
+    <a href="https://twitter.com/liquidpimpz">@LiquidPimpZ</a>
+  </p>
+</div>
+
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
-    <div class="table-responsive">
-      <table class="table table-hover table-inverse">
-        <thead>
-          <tr>
-            <th class="table-title" colspan="5">Team Liquid</th>
-          </tr>
-          <tr>
-            <th>Steam ID</th>
-            <th>Name</th>
-            <th>Roles</th>
-            <th>Country</th>
-            <th>Join Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197995889730", player_name: "nitr0" } do %>
-            <td>nitr0</td>
-            <td>Nick Cannella</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>USA</td>
-            <td>2015-01-13</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561198066693739", player_name: "EliGE" } do %>
-            <td>EliGE</td>
-            <td>Jonathan Jablonowski</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>USA</td>
-            <td>2015-03-22</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197960268519", player_name: "Hiko" } do %>
-            <td>Hiko</td>
-            <td>Spencer Martin</td>
-            <td>IGL / Rifler / Lurker</td>
-            <td>USA</td>
-            <td>2015-09-03</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197967489380", player_name: "jdm64" } do %>
-            <td>jdm64</td>
-            <td>Joshua Marzano</td>
-            <td>Primary AWPer</td>
-            <td>USA</td>
-            <td>2016-06-13</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561198018008308", player_name: "Pimp" } do %>
-            <td>Pimp</td>
-            <td>Jacob Winneche</td>
-            <td>Rifler / AWPer</td>
-            <td>Denmark</td>
-            <td>2016-06-15</td>
-          <% end %>
-          <% content_tag :tr, class: "players-list-player",
-            data: { player_id: "76561197988628603", player_name: "peacemaker" } do %>
-            <td>peacemaker</td>
-            <td>Luis Tadeu</td>
-            <td>Coach</td>
-            <td>Brazil</td>
-            <td>2016-05-17</td>
-          <% end %>
-        </tbody>
-      </table>
+    <div class="team-players">
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/nitr0.jpg" %>
+          <span>nitr0</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Nick Cannella</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler / Entry Fragger</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2015-01-13</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197995889730", player_name: "nitr0" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            nitr0, like many other pros, started his professional Counter Strike
+            career playing CS 1.6. Throughout 2014 he played on a number of
+            professional teams including Denial eSports, iBUYPOWER, and Torqued.
+            As the team's entry fragger, he leads the charge, and opens up
+            rounds for his team by finding initial kills.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/elige.jpg" %>
+          <span>EliGE</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Jonathan Jablonowski</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler / Entry Fragger</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2015-03-22</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561198066693739", player_name: "EliGE" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            EligE is relatively new to the professional Counter Strike scene.
+            He started his career with SapphireKelownaDotCom, but did not have
+            any notable tournament results with them. Since join Team Liquid he
+            has put up impressive performances, most recently resulting in a
+            second place finish at ESL One Cologne, and a fourth place finish
+            at ESL One New York.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/hiko.jpg" %>
+          <span>Hiko</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Spencer Martin</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>IGL / Rifler / Lurker</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2015-09-03</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197960268519", player_name: "Hiko" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Hiko is one of those veteran Counter Strike players that everyone
+            knows. He has played CS since as early as version 1.5. Since
+            switching to CS:GO he has played on an impressive number of top tier
+            teams including Cloud9, compLexity Gaming, iBUYPOWER, and now Team
+            Liquid to name a few. The famous quote "Hiko, are you kidding me!?"
+            best describes his explosive play style.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/jdm.jpg" %>
+          <span>jdm64</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Joshua Marzano</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>AWPer</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-06-13</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197967489380", player_name: "jdm64" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+           Josh, or jdm64, was Counter Logic Gaming's primary AWPer, until he
+           switched teams with koosta recently. Only shortly after joining
+           Team Liquid, they placed second and fourth at the two ESL One majors
+           in Cologne and New York. Much of the success in these tournaments can
+           be attributed to jdm's incredible reflexes, allowing him to rapidly
+           eliminate enemy players rushing him from multiple directions.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/pimp.jpg" %>
+          <span>Pimp</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Jacob Winneche</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>Denmark</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler / AWPer</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-06-15</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561198018008308", player_name: "Pimp" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Although you might not guess it due to his age, Pimp has been part
+            of the professional Counter Strike scene for a long time. He's a
+            Danish player who has played on a huge list of teams since mid 2012,
+            including Team Dignitas, SK Gaming, and now Team Liquid after
+            making the move to North America.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
