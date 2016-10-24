@@ -7,6 +7,10 @@ body {
   height: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 .page-wrapper {
   min-height: 100%;
   position: relative;
@@ -23,6 +27,27 @@ body {
   bottom: 0;
   left: 0;
 }
+
+/* Creates a 3-line "hamburger" icon for the navigation toggle */
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 3px;
+  height: 5px;
+  width: 35px;
+  background: $text-lighter;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+/* End navigation toggle */
 
 .navbar-dark {
   background-color: $background-dark-2;
@@ -43,6 +68,31 @@ body {
 
   .nav-item + .nav-item {
     margin-left: 0;
+  }
+}
+
+.dropdown-menu {
+  background-color: $background-hover;
+  padding: 0;
+
+  a {
+    display: block;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &:first-child {
+      padding-top: 10px;
+    }
+
+    &:last-child {
+      padding-bottom: 10px;
+    }
+
+    &:hover {
+      background-color: $background-dark-2;
+      a { color: $text-lighter; }
+    }
   }
 }
 

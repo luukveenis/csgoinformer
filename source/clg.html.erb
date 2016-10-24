@@ -1,0 +1,259 @@
+---
+title: "Counter Logic Gaming - Professional CS:GO Team"
+---
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag "teams" %>
+  <%= stylesheet_link_tag "slick" %>
+  <%= stylesheet_link_tag "slick-theme" %>
+<% end %>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "slick.min.js" %>
+  <%= javascript_include_tag "teams" %>
+<% end %>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="teams-carousel">
+      <figure>
+        <%= image_tag "teams/clg1.png" %>
+        <figcaption>
+          Image credit
+          <%= link_to "Wikipedia", "https://en.wikipedia.org/wiki/Counter_Logic_Gaming" %>
+        </figcaption>
+      </figure>
+      <figure>
+        <%= image_tag "teams/clg2.jpg" %>
+        <figcaption>
+          Image credit
+          <%= link_to "@ESLCS", "https://twitter.com/ESLCS" %>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="team-title">
+  <h1>Counter Logic Gaming</h1>
+  <p class="player-images-disclaimer">
+    Player images borrowed from Twitter:
+    <a href="https://twitter.com/reltuc">@reltuC</a>,
+    <a href="https://twitter.com/clghazed">@CLGhazed</a>,
+    <a href="https://twitter.com/clg_nahte">@CLG_Nahte</a>,
+    <a href="https://twitter.com/clgkoosta">@CLGkoosta</a>,
+    <a href="https://twitter.com/clgsubroza">@CLGSubroza</a>
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="team-players">
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/cutler.jpg" %>
+          <span>reltuC</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Stephen Cutler</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>In Game Leader / Rifler</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2015-01-16</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197960784488", player_name: "reltuC" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            reltuC or Cutler, like many other CS:GO players, has his roots in
+            professional Counter Strike 1.6, playing under the mouseSpaz
+            organization. Over the years he's played for many top tier teams,
+            including Denial eSports, NetcodeGuides.com, and currently CLG.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/hazed.jpg" %>
+          <span>hazed</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>James Cobb</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler / Entry Fragger</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2015-01-16</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197990571509", player_name: "hazed" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Hazed is CLG's current In Game Leader. He made his debut in the
+            professional CS:GO scene, while playing under the NetcodeGuides.com
+            organization. He has been on the same lineup as reltuC throughout
+            his entire professional career on NetcodeGuides.com, mouseSpaz,
+            and Counter Logic Gaming. His last 1st place standing was at
+            the Northern Arena event in December 2015.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/nahte.jpg" %>
+          <span>nahtE</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Ethan Arnold</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-08-17</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561198129443530", player_name: "nahtE" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            nahtE is an up-and-coming player, just having made his way into
+            the professional scene. At age 16, he is among the youngest
+            professional CS:GO players in the world. He was picked up by CLG
+            after recently being promoted into the Rank S skill group on ESEA.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/koosta.jpg" %>
+          <span>koosta</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Kenneth Suen</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>AWPer</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-06-13</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197960427318", player_name: "koosta" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Koosta has been playing professional CS:GO since early 2015. Until
+            recently, he was the primary AWPer for Team Liquid, until jdm64 and
+            himself traded places on their respective teams. He has continued
+            to take the role as primary AWPer, but has come up with impressive
+            performances rifling as well.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/subroza.jpg" %>
+          <span>Subroza</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Yassine Taoufik</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>Canada</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-08-17</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561198072264947", player_name: "Subroza" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Subroza is a young CS:GO player from Montreal, Canada. He joined the
+            CLG roster in August after an impressive 1st place finish with his
+            team ACE Gaming at Dreamhack Montreal. Despite having a relatively
+            short CS:GO career until now, there is no shortage of highlight
+            clips of incredible plays by Subroza, even leading to parts of the
+            community accusing him of cheating.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= partial "player_modal" %>

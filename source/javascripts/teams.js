@@ -1,3 +1,12 @@
+/* This piece of JavaScript code controls all the functionality on the
+ * various Teams pages. It allows users to click player names, which opens a
+ * modal and loads player stats from Valve's web API. It also creates an
+ * image carousel using Slick.
+ *
+ * Author: Luuk Veenis
+ * Date: October 2, 2016
+ */
+
 /* Wrap everything in an IIFE to avoid leaking functions and variables into
  * the global namespace
  */
@@ -211,7 +220,7 @@
    * player name/thumbnail is clicked, we open a modal with their stats which
    * gets populated by calling Steam's Web API.
    */
-  var playerElements = document.querySelectorAll(".team-list-player")
+  var playerElements = document.querySelectorAll(".player-stats")
   for (let pe of playerElements) {
     pe.addEventListener("click", handlePlayerSelect);
   }
@@ -229,5 +238,27 @@
     if (shouldCloseModal(event)) {
       PLAYER_MODAL.hide();
     }
+  });
+
+  /* Initialize the image carousel on team pages
+   * For more configuration options, please see:
+   * http://kenwheeler.github.io/slick/ */
+  $(".teams-carousel").slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 750,
+    pauseOnHover: true
+  });
+
+  /* On professional team pages, this displays an individual player's Bio when
+   * their name/icon is clicked by sliding it down and hides it by sliding
+   * it up when clicked again. */
+  $(".team-players-player-header").click(function(){
+    $this = $(this);
+    $(".player-expand", $this).toggleClass("hidden");
+    $this.siblings(".team-players-player-bio").slideToggle({
+      duration: 300
+    });
   });
 })();

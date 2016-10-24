@@ -11,7 +11,98 @@ $modal-background-color: #333;
   transform: $transforms;
 }
 
-.team-list-player:hover { cursor: pointer; }
+.teams-carousel {
+  margin-top: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.teams-list {
+  list-style: none;
+}
+
+.teams-list-team {
+  a {
+    display: block;
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  span {
+    margin-left: 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
+.team-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.player-images-disclaimer {
+  font-size: 0.8rem;
+}
+
+.team-players-player-header {
+  background-color: $background-dark-2;
+
+  img {
+    width: 150px;
+    height: auto;
+  }
+
+  span {
+    margin-left: 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .player-expand {
+    width: 100px;
+    height: auto;
+    float: right;
+    margin-top: 25px;
+    margin-right: 50px;
+  }
+}
+
+.team-players-player {
+  margin-bottom: 1rem;
+}
+
+.team-players-player-bio {
+  display: none;
+  background-color: #141414;
+  color: $text-lighter;
+  padding: 20px;
+}
+
+.teams-player-table {
+  td {
+    padding: 5px 10px;
+  }
+}
+
+.player-stats {
+  margin-top: 2rem;
+}
+
+.teams-list-team + .teams-list-team {
+  margin-top: 2rem;
+}
+
+.players-list-player:hover { cursor: pointer; }
 
 .player-modal-wrapper {
   position: fixed;

@@ -4,9 +4,6 @@ title: "Professional CS:GO teams"
 <% content_for :stylesheets do %>
   <%= stylesheet_link_tag "teams" %>
 <% end %>
-<% content_for :javascripts do %>
-  <%= javascript_include_tag "teams" %>
-<% end %>
 
 <div class="row">
   <div class="col-md-12">
@@ -18,275 +15,31 @@ title: "Professional CS:GO teams"
         have recently qualified for a major Counter Strike : Global Offensive event.
       </p>
 
-      <p>
-        <strong>* Click on any player to see their real-time stats</strong>
-      </p>
+      <ul class="teams-list">
+        <li class="teams-list-team">
+          <% link_to "clg.html" do %>
+            <%= image_tag "teams/clg_logo.jpg" %>
+            <span class="teams-list-name">Counter Logic Gaming</span>
+          <% end %>
+        </li>
+        <li class="teams-list-team">
+          <% link_to "cloud9.html" do %>
+            <%= image_tag "teams/cloud9_logo.jpg" %>
+            <span class="teams-list-name">Cloud9</span>
+          <% end %>
+        </li>
+        <li class="teams-list-team">
+          <% link_to "team_liquid.html" do %>
+            <%= image_tag "teams/team_liquid_logo.png" %>
+            <span class="teams-list-name">Team Liquid</span>
+          <% end %>
+        </li>
+        <li class="teams-list-team">
+          <% link_to "sk_gaming.html" do %>
+            <%= image_tag "teams/sk_logo.jpg" %>
+            <span class="teams-list-name">SK Gaming</span>
+          <% end %>
+        </li>
     </div>
   </div>
 </div>
-
-<!-- ======= Cloud9 ======= -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="table-responsive">
-      <table class="table table-hover table-inverse">
-        <thead>
-          <tr>
-            <th class="table-title" colspan="5">Cloud9</th>
-          </tr>
-          <tr>
-            <th>Steam ID</th>
-            <th>Name</th>
-            <th>Roles</th>
-            <th>Country</th>
-            <th>Join Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197961021014", player_name: "n0thing" } do %>
-            <td>n0thing</td>
-            <td>Jordan Gilbert</td>
-            <td>IGL / Rifler / Lurker</td>
-            <td>USA</td>
-            <td>2014-08-01</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197964781654", player_name: "shroud" } do %>
-            <td>shroud</td>
-            <td>Michael Grzesiek</td>
-            <td>Rifler</td>
-            <td>Canada / Poland</td>
-            <td>2014-08-01</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197981341453", player_name: "Skadoodle" } do %>
-            <td>Skadoodle</td>
-            <td>Tyler Latham</td>
-            <td>AWPer</td>
-            <td>USA</td>
-            <td>2015-04-29</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197999004010", player_name: "Stewie2k" } do %>
-            <td>Stewie2k</td>
-            <td>Jake Yip</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>USA</td>
-            <td>2016-01-11</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561198054870849", player_name: "autimatic" } do %>
-            <td>Autimatic</td>
-            <td>Alec White</td>
-            <td>IGL / Rifler</td>
-            <td>USA</td>
-            <td>2016-04-23</td>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<!-- ======= Counter Logic Gaming ======= -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="table-responsive">
-      <table class="table table-hover table-inverse">
-        <thead>
-          <tr>
-            <th class="table-title" colspan="5">Counter Logic Gaming</th>
-          </tr>
-          <tr>
-            <th>Steam ID</th>
-            <th>Name</th>
-            <th>Roles</th>
-            <th>Country</th>
-            <th>Join Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197960784488", player_name: "reltuC" } do %>
-            <td>reltuC</td>
-            <td>Stephen Cutler</td>
-            <td>IGL / Rifler</td>
-            <td>USA</td>
-            <td>2015-01-16</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197990571509", player_name: "hazed" } do %>
-            <td>hazed</td>
-            <td>James Cobb</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>USA</td>
-            <td>2015-01-16</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561198129443530", player_name: "nahtE" } do %>
-            <td>nahtE</td>
-            <td>Ethan Arnold</td>
-            <td>Rifler</td>
-            <td>USA</td>
-            <td>2016-08-17</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197960427318", player_name: "koosta" } do %>
-            <td>koosta</td>
-            <td>Kenneth Suen</td>
-            <td>AWPer</td>
-            <td>USA</td>
-            <td>2016-06-13</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561198072264947", player_name: "Subroza" } do %>
-            <td>Subroza</td>
-            <td>Yassine Taoufik</td>
-            <td>Rifler</td>
-            <td>Canada</td>
-            <td>2016-08-17</td>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<!-- ======= SK Gaming ======= -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="table-responsive">
-      <table class="table table-hover table-inverse">
-        <thead>
-          <tr>
-            <th class="table-title" colspan="5">SK Gaming</th>
-          </tr>
-          <tr>
-            <th>Steam ID</th>
-            <th>Name</th>
-            <th>Roles</th>
-            <th>Country</th>
-            <th>Join Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197960690195", player_name: "FalleN" } do %>
-            <td>FalleN</td>
-            <td>Gabriel Toledo</td>
-            <td>IGL / AWPer</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197999186947", player_name: "fer" } do %>
-            <td>fer</td>
-            <td>Fernando Alvarenga</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561198039986599", player_name: "coldzera" } do %>
-            <td>coldzera</td>
-            <td>Marcelo David</td>
-            <td>Rifler / AWPer</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561198130444302", player_name: "fnx" } do %>
-            <td>fnx</td>
-            <td>Lincoln Lau</td>
-            <td>Rifler / Lurker / Entry Fragger</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561198013142296", player_name: "TACO" } do %>
-            <td>TACO</td>
-            <td>Epitácio de Melo</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>Brazil</td>
-            <td>2016-07-01</td>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<!-- ======= Team Liquid ======= -->
-<div class="row">
-  <div class="col-md-12">
-    <div class="table-responsive">
-      <table class="table table-hover table-inverse">
-        <thead>
-          <tr>
-            <th class="table-title" colspan="5">Team Liquid</th>
-          </tr>
-          <tr>
-            <th>Steam ID</th>
-            <th>Name</th>
-            <th>Roles</th>
-            <th>Country</th>
-            <th>Join Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197995889730", player_name: "nitr0" } do %>
-            <td>nitr0</td>
-            <td>Nick Cannella</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>USA</td>
-            <td>2015-01-13</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561198066693739", player_name: "EliGE" } do %>
-            <td>EliGE</td>
-            <td>Jonathan Jablonowski</td>
-            <td>Rifler / Entry Fragger</td>
-            <td>USA</td>
-            <td>2015-03-22</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197960268519", player_name: "Hiko" } do %>
-            <td>Hiko</td>
-            <td>Spencer Martin</td>
-            <td>IGL / Rifler / Lurker</td>
-            <td>USA</td>
-            <td>2015-09-03</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197967489380", player_name: "jdm64" } do %>
-            <td>jdm64</td>
-            <td>Joshua Marzano</td>
-            <td>Primary AWPer</td>
-            <td>USA</td>
-            <td>2016-06-13</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561198018008308", player_name: "Pimp" } do %>
-            <td>Pimp</td>
-            <td>Jacob Winneche</td>
-            <td>Rifler / AWPer</td>
-            <td>Denmark</td>
-            <td>2016-06-15</td>
-          <% end %>
-          <% content_tag :tr, class: "team-list-player",
-            data: { player_id: "76561197988628603", player_name: "peacemaker" } do %>
-            <td>peacemaker</td>
-            <td>Luis Tadeu</td>
-            <td>Coach</td>
-            <td>Brazil</td>
-            <td>2016-05-17</td>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-<%= partial "teams/player_modal" %>

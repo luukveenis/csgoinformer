@@ -1,0 +1,262 @@
+---
+title: "Cloud9 - Professional CS:GO Team"
+---
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag "teams" %>
+  <%= stylesheet_link_tag "slick" %>
+  <%= stylesheet_link_tag "slick-theme" %>
+<% end %>
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "slick.min.js" %>
+  <%= javascript_include_tag "teams" %>
+<% end %>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="teams-carousel">
+      <figure>
+        <%= image_tag "teams/cloud9_1.png" %>
+        <figcaption>
+          Image credit
+          <%= link_to "Wikipedia", "https://en.wikipedia.org/wiki/Cloud9_(eSports)" %>
+        </figcaption>
+      </figure>
+      <figure>
+        <%= image_tag "teams/cloud9_2.jpg" %>
+        <figcaption>
+          Image credit
+          <%= link_to "Twitter", "https://twitter.com/cloud9" %>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<div class="team-title">
+  <h1>Cloud9</h1>
+  <p class="player-images-disclaimer">
+    Player images borrowed from Twitter:
+    <a href="https://twitter.com/n0thing">@n0thing</a>,
+    <a href="https://twitter.com/C9shroud">@C9shroud</a>,
+    <a href="https://twitter.com/c9skadoodle">@C9Skadoodle</a>,
+    <a href="https://twitter.com/stewie">@Stewie</a>,
+    <a href="https://twitter.com/autimatictv">@autimaticTV</a>
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="team-players">
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/n0thing.jpg" %>
+          <span>n0thing</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Jordan Gilbert</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>In Game Leader / Rifler / Lurker</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2014-08-01</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197961021014", player_name: "n0thing" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Jordan "n0thing" Gilbert is no stranger to the Counter Strike
+            community. He made his name known in Counter Strike 1.6 playing
+            with the famous Evil Geniuses team. He became famous for killing
+            players through walls, having memorized spammable walls in every
+            map. He made the move to CS:GO in 2013.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/shroud.jpg" %>
+          <span>shroud</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Michael Grzesiek</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>Canada / Poland</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2014-08-01</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197964781654", player_name: "shroud" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Shroud is one of those players everyone in the Counter Strike
+            community loves. He can often be found live streaming on Twitch,
+            with thousands of active viewers at a time. He's entertaining to
+            watch, but also an incredible CS player. There is no shortage of
+            highlight clips of shroud clutching rounds for his team.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/skadoodle.jpg" %>
+          <span>Skadoodle</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Tyler Latham</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>AWPer</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2015-04-29</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197981341453", player_name: "Skadoodle" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Skadoodle is Cloud9's primary AWPer. He doesn't have a background
+            in CS through 1.6 like many other professional players, but that
+            has not stopped him from becoming one of the world's top AWPers.
+            He has played the game since launch, making himself known in season
+            12 of ESEA, and going on to play for teams such as Curse, iBUYPOWER,
+            and, of course, Cloud9.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/stewie2k.jpg" %>
+          <span>Stewie2k</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Jake Yip</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>Rifler / Entry Fragger</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-01-11</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561197999004010", player_name: "Stewie2k" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Stewie2k is one of the youngest professional Counter Strike players
+            in the world. He made himself known playing 10 man pick up games
+            (PUGs) with professional players in their spare time. He became
+            known for his insane plays, flashing and jumping through smokes
+            that would stop other players in their tracks. Since joining Cloud9
+            he has matured into an amazing CS player, even taking on the role
+            as In Game Leader.
+          </div>
+        </div>
+      </div>
+      <div class="team-players-player">
+        <div class="team-players-player-header">
+          <%= image_tag "teams/autimatic.jpg" %>
+          <span>Autimatic</span>
+          <%= image_tag "plus_icon.png", class: "player-expand" %>
+          <%= image_tag "minus_icon.png", class: "player-expand hidden" %>
+        </div>
+        <div class="team-players-player-bio clearfix">
+          <div class="col-md-5">
+            <table class="teams-player-table">
+              <tr>
+                <td>Name</td>
+                <td>Timothy Ta</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>In Game Leader / Rifler</td>
+              </tr>
+              <tr>
+                <td>Joined</td>
+                <td>2016-04-23</td>
+              </tr>
+            </table>
+            <% content_tag :button, class: "btn btn-danger player-stats",
+              data: { player_id: "76561198054870849", player_name: "Autimatic" } do %>
+              Show Stats
+            <% end %>
+          </div>
+          <div class="col-md-7">
+            Autimatic has been part of the professional Counter Strike scene
+            since some time in the middle of 2014. Since then he has played for
+            a number of top tier teams including: Tempo Storm, compLexity
+            Gaming, Team SoloMid (TSM), and most recently Cloud9. He can often
+            be found live streaming ESEA's Rank S games on Twitch.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= partial "player_modal" %>
