@@ -1,0 +1,22 @@
+@import "variables";
+
+.news-container {
+  padding: 2rem;
+}
+
+.news-item + .news-item {
+  border-top: 2px solid $text-light;
+  padding-top: 2rem;
+}
+
+.news-item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.news-item-description {
+  font-size: 0.8rem;
+}
+
+.read-more {
+  color: $text-lighter;
+}
