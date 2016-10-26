@@ -14,8 +14,10 @@
 
   <body class="<%= page_classes %>">
     <div class="page-wrapper">
+      <!-- Begin navbar -->
       <nav class="navbar navbar-full navbar-dark">
         <button id="nav-toggle" class="hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Empty spans are use to style for "hamburger" icon" -->
           <span></span>
           <span></span>
         </button>
@@ -50,11 +52,15 @@
           </ul>
         </div>
       </nav>
+      <!-- End navbar -->
 
+      <!-- Begin page content -->
       <div class="body-wrapper container">
         <%= yield %>
       </div>
+      <!-- End page content -->
 
+      <!-- Begin footer section -->
       <div class="footer-wrapper">
         <footer class="footer-menu">
           <div class="container">
@@ -88,14 +94,18 @@
             </div>
           </div>
         </footer>
+        <!-- Credits for free icons used on this site -->
         <footer class="credits">
           <div class="container">
             <div>Social media icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             <div>Steam icon made by <a href="http://www.flaticon.com/authors/zurb" title="Zurb">Zurb</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
           </div>
         </footer>
+        <!-- End footer section -->
       </div>
     </div>
+
+    <!-- Javascript files -->
     <%= javascript_include_tag "jquery-3.1.1.min.js" %>
     <%= javascript_include_tag "tether.min.js" %>
     <%= javascript_include_tag "bootstrap.min.js" %>
